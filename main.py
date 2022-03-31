@@ -15,14 +15,7 @@ def route_updates():
 def time_calculator():
   return render_template('Time Calculator.html')
 
-### Fetch Example ###
-@app.route('/test/', methods=['GET', 'POST'])
-def testfn():
-   if request.method == 'POST':
-      return 1
-   else:
-      message = {'greeting':'Hello from Flask!'}
-      return jsonify(message)
+
 
 if __name__ == '__main__':
    app.run()
