@@ -1,6 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, jsonify
 app = Flask(__name__)
 
+### Site Pages ###
 @app.route('/')
 def home():
    return render_template('main.html')
@@ -14,7 +15,14 @@ def route_updates():
 def time_calculator():
   return render_template('Time Calculator.html')
 
-
+### Fetch Example ###
+@app.route('/test/', methods=['GET', 'POST'])
+def testfn():
+   if request.method == 'POST':
+      return 1
+   else:
+      message = {'greeting':'Hello from Flask!'}
+      return jsonify(message)
 
 if __name__ == '__main__':
    app.run()
