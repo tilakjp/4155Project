@@ -43,18 +43,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <header class="w3-container w3-red w3-center" style="padding:128px 16px">
   <h1 class="w3-margin w3-jumbo"> Time Calculator</h1>
   <p class="w3-xlarge">Worried About Time? We Got You Covered!</p>
-  <a href = "{{ url_for('home') }}" class = "w3-button w3-black w3-padding-large w3-large w3-margin-top">Home</a>
 </header>
 
 <!-- First Grid -->
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
-      <form></form>
-        <label> for="gRoutes">Choose the beginning stop:</label>
-        <select name="gRoutes" id="gRoutes">
+      <form method="post" action="{{ url_for('calc_result') }}" id="timeCalcForm">
+        <label for="Stop1">Choose the beginning stop:</label>
+        <select name="Stop1" id="Stop1">
           <option value="lightrail">Wallis Hall/Light Rail</option>
-          <option value="studenthealth">FM/PPS/Stuent Health East</option>
+          <option value="studenthealth">FM/PPS/Student Health East</option>
           <option value="fretwell">Fretwell South</option>
           <option value="cato">Cato Hall South</option>
           <option value="robinson">Robinson Hall South</option>
@@ -69,10 +68,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
           <option value="studentu">Student Union West</option>
           <option value="belk">Belk Hall North</option>
         </select>
-        <br>
-        <label for="gRoutes2">Choose the destination stop:</label>
-        <select name="gRoutes2" id="gRoutes2">        
-          <option value="studenthealth">FM/PPS/Stuent Health East</option>
+        <br/>
+        <label for="Stop2">Choose the destination stop:</label>
+        <select name="Stop2" id="Stop2">        
+          <option value="studenthealth">FM/PPS/Student Health East</option>
           <option value="lightrail">Wallis Hall/Light Rail</option>
           <option value="fretwell">Fretwell South</option>
           <option value="cato">Cato Hall South</option>
@@ -88,6 +87,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
           <option value="studentu">Student Union West</option>
           <option value="belk">Belk Hall North</option>
         </select>
+        <br/>
+        <input type="submit" value="Calculate"/>
+      </form>
+      {% if calcSuccess == True %}
+        <br/>
+        <p>The calculation for {{stop1}} and {{stop2}} is: 4</p>
+      {% endif %}
     </div>
 
   </div>

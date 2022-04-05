@@ -11,11 +11,18 @@ def routes():
 @app.route('/Route Updates/')
 def route_updates():
    return render_template('Route Updates.html')
-@app.route('/Time Calculator/')
+@app.route('/Time Calculator/', methods=['GET'])
 def time_calculator():
   return render_template('Time Calculator.html')
+
+@app.route('/calc_result/', methods=['POST'])
+def calc_result():
+   firstStop = request.form['Stop1']
+   secondStop = request.form['Stop2']
+   return render_template('Time Calculator.html', stop1 = firstStop, stop2 = secondStop, calcSuccess = True)
 
 
 
 if __name__ == '__main__':
+   app.debug = True
    app.run()
