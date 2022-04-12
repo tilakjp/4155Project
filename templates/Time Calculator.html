@@ -54,35 +54,35 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         <select name="Stop1" id="Stop1">
           <option value="lightrail">Wallis Hall/Light Rail</option>
           <option value="studenthealth">FM/PPS/Student Health East</option>
-          <option value="fretwell">Fretwell South</option>
-          <option value="cato">Cato Hall South</option>
-          <option value="robinson">Robinson Hall South</option>
+          <option value="fretwellS">Fretwell South</option>
+          <option value="catoS">Cato Hall South</option>
+          <option value="robinsonS">Robinson Hall South</option>
           <option value="levine">Levine Hall West</option>
           <option value="hunt">Hunt Hall</option>
           <option value="alumni">Alumni Way West</option>
           <option value="reese">Reese East</option>
-          <option value="robinson">Robinson Hall North</option>
-          <option value="cato">Cato Hall North</option>
-          <option value="fretwell">Fretwell North</option>
+          <option value="robinsonN">Robinson Hall North</option>
+          <option value="catoN">Cato Hall North</option>
+          <option value="fretwellN">Fretwell North</option>
           <option value="science">Science Building</option>
           <option value="studentu">Student Union West</option>
           <option value="belk">Belk Hall North</option>
         </select>
         <br/>
         <label for="Stop2">Choose the destination stop:</label>
-        <select name="Stop2" id="Stop2">        
-          <option value="studenthealth">FM/PPS/Student Health East</option>
+        <select name="Stop2" id="Stop2">
+          <option value="studenthealth">FM/PPS/Student Health East</option>        
           <option value="lightrail">Wallis Hall/Light Rail</option>
-          <option value="fretwell">Fretwell South</option>
-          <option value="cato">Cato Hall South</option>
-          <option value="robinson">Robinson Hall South</option>
+          <option value="fretwellS">Fretwell South</option>
+          <option value="catoS">Cato Hall South</option>
+          <option value="robinsonS">Robinson Hall South</option>
           <option value="levine">Levine Hall West</option>
           <option value="hunt">Hunt Hall</option>
           <option value="alumni">Alumni Way West</option>
           <option value="reese">Reese East</option>
-          <option value="robinson">Robinson Hall North</option>
-          <option value="cato">Cato Hall North</option>
-          <option value="fretwell">Fretwell North</option>
+          <option value="robinsonN">Robinson Hall North</option>
+          <option value="catoN">Cato Hall North</option>
+          <option value="fretwellN">Fretwell North</option>
           <option value="science">Science Building</option>
           <option value="studentu">Student Union West</option>
           <option value="belk">Belk Hall North</option>
@@ -92,7 +92,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       </form>
       {% if calcSuccess == True %}
         <br/>
-        <p>The calculation for {{stop1}} and {{stop2}} is: 4</p>
+        <p>The calculation for {{stop1}} and {{stop2}} is: {{result}}</p>
       {% endif %}
     </div>
 
