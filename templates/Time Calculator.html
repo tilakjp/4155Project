@@ -49,8 +49,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
-      <form method="post" action="{{ url_for('calc_result') }}" id="timeCalcForm">
-        <label for="Stop1">Choose the beginning stop:</label>
+      <form method="post" action="{{ url_for('calc_result') }}" id="timeCalcFormGold">
+        <label for="Stop1">Choose the beginning Gold Route stop:</label>
         <select name="Stop1" id="Stop1">
           <option value="lightrail">Wallis Hall/Light Rail</option>
           <option value="studenthealth">FM/PPS/Student Health East</option>
@@ -69,7 +69,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
           <option value="belk">Belk Hall North</option>
         </select>
         <br/>
-        <label for="Stop2">Choose the destination stop:</label>
+        <label for="Stop2">Choose the destination Gold Route stop:</label>
         <select name="Stop2" id="Stop2">
           <option value="studenthealth">FM/PPS/Student Health East</option>        
           <option value="lightrail">Wallis Hall/Light Rail</option>
@@ -86,6 +86,106 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
           <option value="science">Science Building</option>
           <option value="studentu">Student Union West</option>
           <option value="belk">Belk Hall North</option>
+        </select>
+        <br/>
+        <input type="submit" value="Calculate"/>
+      </form>
+
+      <form method="post" action="{{ url_for('calc_result') }}" id="timeCalcFormGreen">
+        <label for="Stop1">Choose the beginning Green Route stop:</label>
+        <select name="Stop1" id="Stop1">
+          <option value="lightrailW">Wallis Hall West/Light Rail</option>
+          <option value="belkS">Belk Hall South</option>
+          <option value="unionE">Student Union East</option>
+          <option value="auxE">Auxiliary Services East</option>
+          <option value="fretwellS">Fretwell Hall South</option>
+          <option value="catoS">Cato Hall South</option>
+          <option value="robinsonS">Robinson Hall South</option>
+          <option value="reeseW">Reese West</option>
+          <option value="coneW">Cone Deck West</option>
+          <option value="southVillage">South Village Deck</option>
+          <option value="gageUAE">Gage UA Center East</option>
+          <option value="robinsonN">Robinson Hall North</option>
+          <option value="catoN">Cato Hall North</option>
+          <option value="fretwellN">Fretwell North</option>
+          <option value="studenthealthN">Student Health North</option>
+          <option value="fm/pps">Facilities Management</option>
+          <option value="northdeck">North Deck</option>
+        </select>
+        <br/>
+        <label for="Stop2">Choose the destination Green Route stop:</label>
+        <select name="Stop2" id="Stop2">          
+          <option value="belkS">Belk Hall South</option>
+          <option value="lightrailW">Wallis Hall West/Light Rail</option>
+          <option value="unionE">Student Union East</option>
+          <option value="auxE">Auxiliary Services East</option>
+          <option value="fretwellS">Fretwell Hall South</option>
+          <option value="catoS">Cato Hall South</option>
+          <option value="robinsonS">Robinson Hall South</option>
+          <option value="reeseW">Reese West</option>
+          <option value="coneW">Cone Deck West</option>
+          <option value="southVillage">South Village Deck</option>
+          <option value="gageUAE">Gage UA Center East</option>
+          <option value="robinsonN">Robinson Hall North</option>
+          <option value="catoN">Cato Hall North</option>
+          <option value="fretwellN">Fretwell North</option>
+          <option value="studenthealthN">Student Health North</option>
+          <option value="fm/pps">Facilities Management</option>
+          <option value="northdeck">North Deck</option>
+        </select>
+        <br/>
+        <input type="submit" value="Calculate"/>
+      </form>
+
+      <form method="post" action="{{ url_for('calc_result') }}" id="timeCalcFormSilver">
+        <label for="Stop1">Choose the beginning Silver Route stop:</label>
+        <select name="Stop1" id="Stop1">
+          <option value="CRIdeck">CRI Deck</option>
+          <option value="dukecentE">Duke Centennial Hall East</option>
+          <option value="griggS">Grigg Hall South</option>
+          <option value="EPICS">EPIC South</option>
+          <option value="athleticsE">Athletics Complex East</option>
+          <option value="unionE">Student Union East</option>
+          <option value="auxE">Auxiliary Services East</option>
+          <option value="alumniW">Alumni Way West</option>
+          <option value="studenthealthN">Student Health North</option>
+          <option value="martin">Martin Hall</option>
+          <option value="lot6">Lot 6</option>
+          <option value="lot5A">Lot 5A</option>
+          <option value="eastdeck2">East Deck 2</option>
+          <option value="fretwellN">Fretwell North</option>
+          <option value="science">Science Building</option>
+          <option value="unionW">Student Union West</option>
+          <option value="athleticsW">Athletics Complex West</option>
+          <option value="EPICN">EPIC North</option>
+          <option value="griggN">Grigg Hall North</option>
+          <option value="motorsports">Motorsports</option>
+          <option value="PORTALW">PORTAL West</option>
+        </select>
+        <br/>
+        <label for="Stop2">Choose the destination Silver Route stop:</label>
+        <select name="Stop2" id="Stop2">
+          <option value="dukecentE">Duke Centennial Hall East</option>
+          <option value="CRIdeck">CRI Deck</option>
+          <option value="griggS">Grigg Hall South</option>
+          <option value="EPICS">EPIC South</option>
+          <option value="athleticsE">Athletics Complex East</option>
+          <option value="unionE">Student Union East</option>
+          <option value="auxE">Auxiliary Services East</option>
+          <option value="alumniW">Alumni Way West</option>
+          <option value="studenthealthN">Student Health North</option>
+          <option value="martin">Martin Hall</option>
+          <option value="lot6">Lot 6</option>
+          <option value="lot5A">Lot 5A</option>
+          <option value="eastdeck2">East Deck 2</option>
+          <option value="fretwellN">Fretwell North</option>
+          <option value="science">Science Building</option>
+          <option value="unionW">Student Union West</option>
+          <option value="athleticsW">Athletics Complex West</option>
+          <option value="EPICN">EPIC North</option>
+          <option value="griggN">Grigg Hall North</option>
+          <option value="motorsports">Motorsports</option>
+          <option value="PORTALW">PORTAL West</option>
         </select>
         <br/>
         <input type="submit" value="Calculate"/>
