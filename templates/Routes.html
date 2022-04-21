@@ -23,7 +23,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="{{ url_for('home') }}" class="w3-bar-item w3-button w3-padding-large w3-hover-white">Home</a>
     <a href="{{ url_for('routes') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">Routes</a>
-    <a href="{{ url_for('time_calculator') }}"" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Time
+    <a href="{{ url_for('time_calculator') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Time
       Calculator</a>
     <a href="{{ url_for('route_updates') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Route
       Updates</a>
@@ -83,6 +83,27 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <h1>Green</h1>
     </div>
 
+    <select name="grRoutes" id="grRoutes">
+      <option value="lightrail">Wallis Hall/Light Rail</option>
+      <option value="belk">Belk Hall South</option>
+      <option value="stuco">Student Union East</option>
+      <option value="aux">Auxiliary Services East</option>
+      <option value="fretwell">Fretwell Hall South</option>
+      <option value="cato">Cato Hall South</option>
+      <option value="robinson">Robinson Hall South</option>
+      <option value="reese">Reese West</option>
+      <option value="cone">Cone Deck West</option>
+      <option value="alumni">Alumni Way East</option>
+      <option value="south">South Village Deck</option>
+      <option value="gage">Gage UA Center East</option>
+      <option value="robinson">Robinson Hall North</option>
+      <option value="cato">Cato Hall North</option>
+      <option value="fretwell">Fretwell North</option>
+      <option value="stuhealth">Student Health North</option>
+      <option value="fmpps">FM/PPS/Student Health West</option>
+      <option value="north">North Deck</option>
+    </select>
+
     <a href="{{ url_for('time_calculator') }}" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Go!</a>
 
   </div>
@@ -95,6 +116,29 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <h1>Silver</h1>
      
     </div>
+
+    <select name="sRoutes" id="sRoutes">
+      <option value="cri">CRI Deck</option>
+      <option value="duke">Duke Centennial Hall East</option>
+      <option value="grigg">Grigg Hall South</option>
+      <option value="epic">EPIC South</option>
+      <option value="athletics">Athletics Complex East</option>
+      <option value="studentu">Student Union East</option>
+      <option value="aux">Auxiliary Services East</option>
+      <option value="studenth">Student Health North</option>
+      <option value="martin">Martin Hall</option>
+      <option value="lot6">Lot 6</option>
+      <option value="lot5a">Lot 5A</option>
+      <option value="east">East Deck 2</option>
+      <option value="fretwell">Fretwell North</option>
+      <option value="science">Science Building</option>
+      <option value="studentu">Student Union West</option>
+      <option value="athletics">Athletics Complex West</option>
+      <option value="epic">EPIC North</option>
+      <option value="grigg">Grigg Hall North</option>
+      <option value="motorsports">Motorsports</option>
+      <option value="portal">PORTAL West</option>
+    </select>
 
     <a href="{{ url_for('time_calculator') }}" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Go!</a>
 
