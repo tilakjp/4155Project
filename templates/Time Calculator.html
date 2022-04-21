@@ -49,8 +49,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
+      <h1>Gold</h1>
       <form method="post" action="{{ url_for('calc_result') }}" id="timeCalcFormGold">
-        <label for="Stop1">Choose the beginning Gold Route stop:</label>
+        <label for="Stop1">Starting At:</label>
         <select name="Stop1" id="Stop1">
           <option value="lightrail">Wallis Hall/Light Rail</option>
           <option value="studenthealth">FM/PPS/Student Health East</option>
@@ -69,7 +70,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
           <option value="belk">Belk Hall North</option>
         </select>
         <br/>
-        <label for="Stop2">Choose the destination Gold Route stop:</label>
+        <label for="Stop2">Stopping At:</label>
         <select name="Stop2" id="Stop2">
           <option value="studenthealth">FM/PPS/Student Health East</option>        
           <option value="lightrail">Wallis Hall/Light Rail</option>
@@ -88,57 +89,84 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
           <option value="belk">Belk Hall North</option>
         </select>
         <br/>
-        <input type="submit" value="Calculate"/>
+        <input type="submit" value="Calculate" class="w3-button w3-black w3-padding-large w3-large w3-margin-top"/>
       </form>
 
-      <form method="post" action="{{ url_for('calc_result') }}" id="timeCalcFormGreen">
-        <label for="Stop1">Choose the beginning Green Route stop:</label>
-        <select name="Stop1" id="Stop1">
-          <option value="lightrailW">Wallis Hall West/Light Rail</option>
-          <option value="belkS">Belk Hall South</option>
-          <option value="unionE">Student Union East</option>
-          <option value="auxE">Auxiliary Services East</option>
-          <option value="fretwellS">Fretwell Hall South</option>
-          <option value="catoS">Cato Hall South</option>
-          <option value="robinsonS">Robinson Hall South</option>
-          <option value="reeseW">Reese West</option>
-          <option value="coneW">Cone Deck West</option>
-          <option value="southVillage">South Village Deck</option>
-          <option value="gageUAE">Gage UA Center East</option>
-          <option value="robinsonN">Robinson Hall North</option>
-          <option value="catoN">Cato Hall North</option>
-          <option value="fretwellN">Fretwell North</option>
-          <option value="studenthealthN">Student Health North</option>
-          <option value="fm/pps">Facilities Management</option>
-          <option value="northdeck">North Deck</option>
-        </select>
-        <br/>
-        <label for="Stop2">Choose the destination Green Route stop:</label>
-        <select name="Stop2" id="Stop2">               
-          <option value="belkS">Belk Hall South</option>     
-          <option value="lightrailW">Wallis Hall West/Light Rail</option>
-          <option value="unionE">Student Union East</option>
-          <option value="auxE">Auxiliary Services East</option>
-          <option value="fretwellS">Fretwell Hall South</option>
-          <option value="catoS">Cato Hall South</option>
-          <option value="robinsonS">Robinson Hall South</option>
-          <option value="reeseW">Reese West</option>
-          <option value="coneW">Cone Deck West</option>
-          <option value="southVillage">South Village Deck</option>
-          <option value="gageUAE">Gage UA Center East</option>
-          <option value="robinsonN">Robinson Hall North</option>
-          <option value="catoN">Cato Hall North</option>
-          <option value="fretwellN">Fretwell North</option>
-          <option value="studenthealthN">Student Health North</option>
-          <option value="fm/pps">Facilities Management</option>
-          <option value="northdeck">North Deck</option>
-        </select>
-        <br/>
-        <input type="submit" value="Calculate"/>
-      </form>
+      {% if calcSuccess == True %}
+      <br/>
+      <p>The calculation for {{stop1}} and {{stop2}} is: {{result}} minute(s)</p>
+    {% endif %}    
+  </div>
+</div>
+</div>
 
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Green</h1>
+
+    <form method="post" action="{{ url_for('calc_result') }}" id="timeCalcFormGreen">
+      <label for="Stop1">Starting At:</label>
+      <select name="Stop1" id="Stop1">
+        <option value="lightrailW">Wallis Hall West/Light Rail</option>
+        <option value="belkS">Belk Hall South</option>
+        <option value="unionE">Student Union East</option>
+        <option value="auxE">Auxiliary Services East</option>
+        <option value="fretwellS">Fretwell Hall South</option>
+        <option value="catoS">Cato Hall South</option>
+        <option value="robinsonS">Robinson Hall South</option>
+        <option value="reeseW">Reese West</option>
+        <option value="coneW">Cone Deck West</option>
+        <option value="southVillage">South Village Deck</option>
+        <option value="gageUAE">Gage UA Center East</option>
+        <option value="robinsonN">Robinson Hall North</option>
+        <option value="catoN">Cato Hall North</option>
+        <option value="fretwellN">Fretwell North</option>
+        <option value="studenthealthN">Student Health North</option>
+        <option value="fm/pps">Facilities Management</option>
+        <option value="northdeck">North Deck</option>
+      </select>
+      <br/>
+      <label for="Stop2">Stopping At:</label>
+      <select name="Stop2" id="Stop2">               
+        <option value="belkS">Belk Hall South</option>     
+        <option value="lightrailW">Wallis Hall West/Light Rail</option>
+        <option value="unionE">Student Union East</option>
+        <option value="auxE">Auxiliary Services East</option>
+        <option value="fretwellS">Fretwell Hall South</option>
+        <option value="catoS">Cato Hall South</option>
+        <option value="robinsonS">Robinson Hall South</option>
+        <option value="reeseW">Reese West</option>
+        <option value="coneW">Cone Deck West</option>
+        <option value="southVillage">South Village Deck</option>
+        <option value="gageUAE">Gage UA Center East</option>
+        <option value="robinsonN">Robinson Hall North</option>
+        <option value="catoN">Cato Hall North</option>
+        <option value="fretwellN">Fretwell North</option>
+        <option value="studenthealthN">Student Health North</option>
+        <option value="fm/pps">Facilities Management</option>
+        <option value="northdeck">North Deck</option>
+      </select>
+      <br/>
+      <input type="submit" value="Calculate" class="w3-button w3-black w3-padding-large w3-large w3-margin-top"/>
+    </form>
+
+    {% if calcSuccess == True %}
+    <br/>
+    <p>The calculation for {{stop1}} and {{stop2}} is: {{result}} minute(s)</p>
+  {% endif %}
+  </div>
+</div>
+</div>
+
+<!-- Third Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Silver</h1>
       <form method="post" action="{{ url_for('calc_result') }}" id="timeCalcFormSilver">
-        <label for="Stop1">Choose the beginning Silver Route stop:</label>
+        <label for="Stop1">Starting At:</label>
         <select name="Stop1" id="Stop1">
           <option value="CRIdeck">CRI Deck</option>
           <option value="dukecentE">Duke Centennial Hall East</option>
@@ -162,7 +190,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
           <option value="PORTALW">PORTAL West</option>
         </select>
         <br/>
-        <label for="Stop2">Choose the destination Silver Route stop:</label>
+        <label for="Stop2">Stopping At:</label>
         <select name="Stop2" id="Stop2">          
           <option value="dukecentE">Duke Centennial Hall East</option>
           <option value="CRIdeck">CRI Deck</option>
@@ -186,13 +214,33 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
           <option value="PORTALW">PORTAL West</option>
         </select>
         <br/>
-        <input type="submit" value="Calculate"/>
+        <input type="submit" value="Calculate" class="w3-button w3-black w3-padding-large w3-large w3-margin-top"/>
       </form>
       {% if calcSuccess == True %}
         <br/>
-        <p>The calculation for {{stop1}} and {{stop2}} is: {{result}}</p>
+        <p>The calculation for {{stop1}} and {{stop2}} is: {{result}} minute(s)</p>
       {% endif %}
     </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+      
 
   </div>
 </div>
