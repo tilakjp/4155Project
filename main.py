@@ -27,12 +27,30 @@ routes_internal = { "lightrail": "Wallis Hall E/Light Rail",
                         "belkS": "Belk Hall S",
                         "unionE": "Student Union E",
                         "auxE": "Aux Services East",
-                        "fretwellS": "Fretwell S",
-                        "catoS": "Cato Hall S",
                         "robinsonS": "Robinson Hall S",
                         "reeseW": "Reese West",
                         "coneW": "Cone Deck W",
-                        "southVillage": "South Village Deck"
+                        "southVillage": "South Village Deck",
+                        ##gageUAE: -Gage Undergraduate Admissions Center East doesn't seem to exist in the data we were given.
+                        "robinsonN": "Robinson Hall N",
+                        "studenthealthN": "Student Health N",
+                        "Facilities Management": "FM/Police Building",
+                        "northdeck": "North Deck",
+                        "CRIdeck": "CRI Deck",
+                        "dukecentE": "Duke Centennial Hall East",
+                        "Grigg Hall": "Grigg Hall E",
+                        "EPIC South": "EPIC S",
+                        "athleticsE": "Athletics Complex E",
+                        "martin": "Martin Hall",
+                        "lot6": "Lot 6",
+                        "lot5A": "Lot 5A",
+                        "eastdeck2": "East Deck 2",
+                        "unionW": "Student Union W",
+                        "athleticsW": "Athletics Complex W",
+                        "EPIC North": "EPIC N",
+                        "motorsports": "Motor Sports",
+                        "PORTALW": "PORTAL W"
+
                         }
 
 ### Site Pages ###
