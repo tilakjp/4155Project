@@ -45,4 +45,4 @@ class TimeCalculator:
         if(len(filtered_time) == 0):
             return -1, []
         print(f"Median at hour {hour} on weekday {day + 1} in month {month} of 2021: {median(filtered_time)} minutes.")
-        return median(filtered_time)
+        return min(filtered_time)
