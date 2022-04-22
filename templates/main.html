@@ -3,17 +3,26 @@
 <head>
 <title>Niner Routes</title>
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/Styling.css') }}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"/>
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
+
+#map{
+              height: 750px;
+              width: 1000px;
+              margin: 5rem auto;
+          }
 </style>
 </head>
+
 <body>
 
 <!-- Navbar -->
@@ -46,10 +55,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </header>
 
 <!-- First Grid -->
-<header class="w3-container  w3-center" style="padding:64px 16px">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3255.955270731177!2d-80.73735268441017!3d35.307092880283115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88541c1ad0a92357%3A0x6b3f67f7f19324f3!2sUniversity%20of%20North%20Carolina%20at%20Charlotte!5e0!3m2!1sen!2sus!4v1648756227791!5m2!1sen!2sus" width="1000" height="750" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div id="map"></div>
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
+<script src="/static/js/map.js"></script>  
 
-</header>
 
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
     <h1 class="w3-margin w3-xlarge">For more information please visit the UNCC Campus or website!</h1>
