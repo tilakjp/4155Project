@@ -46,10 +46,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </header>
 
 <!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
-      
+
+      <div class ="gold">
       <h1>Gold</h1>
       <form method="post" action="{{ url_for('calc_result') }}" id="timeCalcFormGold">
         <label for="Stop1">Starting At:</label>
@@ -70,6 +68,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
           <option value="studentu">Student Union West</option>
           <option value="belk">Belk Hall North</option>
         </select>
+      
         <br/>
         <label for="Stop2">Stopping At:</label>
         <select name="Stop2" id="Stop2">
@@ -92,19 +91,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         <br/>
         <input type="submit" value="Calculate" class="w3-button w3-black w3-padding-large w3-large w3-margin-top"/>
       </form>
+    
 
       {% if calcSuccess == True %}
       <br/>
       <p>The calculation for {{stop1}} and {{stop2}} is: {{result}} minute(s)</p>
     {% endif %}    
+
   </div>
-</div>
-</div>
+  
 
 <!-- Second Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
+
+      <div class="green">
       <h1>Green</h1>
 
     <form method="post" action="{{ url_for('calc_result') }}" id="timeCalcFormGreen">
@@ -152,19 +151,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <br/>
       <input type="submit" value="Calculate" class="w3-button w3-black w3-padding-large w3-large w3-margin-top"/>
     </form>
+  
 
     {% if calcSuccess == True %}
     <br/>
     <p>The calculation for {{stop1}} and {{stop2}} is: {{result}} minute(s)</p>
   {% endif %}
-  </div>
-</div>
+
+
 </div>
 
 <!-- Third Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
+
+      <div class ="silver">
       <h1>Silver</h1>
       <form method="post" action="{{ url_for('calc_result') }}" id="timeCalcFormSilver">
         <label for="Stop1">Starting At:</label>
@@ -217,14 +216,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         <br/>
         <input type="submit" value="Calculate" class="w3-button w3-black w3-padding-large w3-large w3-margin-top"/>
       </form>
+    
       {% if calcSuccess == True %}
         <br/>
         <p>The calculation for {{stop1}} and {{stop2}} is: {{result}} minute(s)</p>
       {% endif %}
-    </div>
-
-
-  </div>
+    
 </div>
 
 
