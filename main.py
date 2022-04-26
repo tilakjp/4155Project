@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from CalculateFile import TimeCalculator
+from LinkedListLooping import LinkedListLooping
 import pandas as pd
 from datetime import datetime
 
@@ -8,6 +9,20 @@ app = Flask(__name__)
 original_file = pd.read_csv("merged_stop_data.csv", dtype = str)
 calc = TimeCalculator()
 
+#Initialize a looping linked list of stops for each of the three routes. Uses shorthand names.
+ll_gold = LinkedListLooping(["lightrail", "studenthealth", "fretwellS", "catoS", "robinsonS",
+                           "levine", "hunt", "alumni", "reese", "robinsonN", "catoN", "fretwellN",
+                           "science", "studentu", "belk"])
+
+ll_green = LinkedListLooping(["lightrailW", "belkS", "unionE", "auxE", "fretwellS", "catoS", "robinsonS",
+                           "reeseW", "coneW", "southVillage", "robinsonN", "catoN", "fretwellN", "studenthealthN",
+                           "fm/pps", "northdeck"])
+
+ll_silver = LinkedListLooping(["CRIdeck", "dukecentE", "Grigg Hall", "EPIC South", "athleticsE", "unionE",
+                              "unionE", "auxE", "alumniW", "studenthealthN", "martin", "lot6", "lot5A", "eastdeck2",
+                              "fretwellN", "science", "unionW", "athleticsW", "EPIC North", "motorsports", "PORTALW"])
+
+#Initialize a dictionary to convert each stop's shorthand name to the internal name used in the database.
 routes_internal = { "lightrail": "Wallis Hall E/Light Rail",
                         "studenthealth": "Student Health E",
                         "fretwellS": "Fretwell South",
@@ -20,7 +35,7 @@ routes_internal = { "lightrail": "Wallis Hall E/Light Rail",
                         "robinsonN": "Robinson Hall N",
                         "catoN": "Cato Hall N", 
                         "fretwellN": "Fretwell N",
-                        "science": "Aux Services West", ##Science Building
+                        "science": "Aux Services West", #Science Building
                         "studentu": "Student Union W",
                         "belk": "Union Deck/Belk N",
                         "lightrailW": "Wallis Hall W/Light Rail",
@@ -31,7 +46,7 @@ routes_internal = { "lightrail": "Wallis Hall E/Light Rail",
                         "reeseW": "Reese West",
                         "coneW": "Cone Deck W",
                         "southVillage": "South Village Deck",
-                        ##gageUAE: -Gage Undergraduate Admissions Center East doesn't seem to exist in the data we were given.
+                        #gageUAE: -Gage Undergraduate Admissions Center East doesn't seem to exist in the data we were given.
                         "robinsonN": "Robinson Hall N",
                         "studenthealthN": "Student Health N",
                         "Facilities Management": "FM/Police Building",
@@ -80,6 +95,8 @@ def calc_result():
    return render_template('Time Calculator.html', result = median, stop1 = firstStop, stop2 = secondStop, calcSuccess = True)
 
 ### Helper Functions ###
+#Given a dictionary and a value, finds the key associated with that value in the dictionary.
+#Used for reverese lookups.
 def dict_key_lookup(dict, val):
    goalKey = ""
    for key in dict.keys():
