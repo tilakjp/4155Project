@@ -1406,3 +1406,80 @@ padding: 0 8px;
 text-align: center;
 
 }
+
+.place{
+    position: sticky;
+}
+
+
+
+.collapsible1 {
+    background-color: gold;
+    color: black;
+    cursor: pointer;
+    padding: 35px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 25px;
+  }
+  
+  .active, .collapsible1:hover {
+    background-color: gold;
+  }
+  
+  .content1 {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+
+
+  .collapsible2 {
+    background-color: green;
+    color: black;
+    cursor: pointer;
+    padding: 35px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 25px;
+  }
+  
+  .active, .collapsible2:hover {
+    background-color: green;
+  }
+  
+  .content2 {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+
+
+  .collapsible3 {
+    background-color: silver;
+    color: black;
+    cursor: pointer;
+    padding: 35px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 25px;
+  }
+  
+  .active, .collapsible3:hover {
+    background-color: silver;
+  }
+  
+  .content3 {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }

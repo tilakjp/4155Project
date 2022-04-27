@@ -46,7 +46,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </header>
 
 <!-- First Grid -->
-
+<button type="button" class="collapsible1">Gold Route</button>
+<div class="content1">
       <div class ="gold">
       <h1>Gold</h1>
       <form method="post" action="{{ url_for('calc_result') }}" id="timeCalcFormGold">
@@ -100,9 +101,28 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
   </div>
   
+</div>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible1");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+  </script>
 
 <!-- Second Grid -->
-
+<button type="button" class="collapsible2">Green Route</button>
+<div class="content2">
       <div class="green">
       <h1>Green</h1>
 
@@ -161,8 +181,28 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 </div>
 
-<!-- Third Grid -->
+</div>
 
+
+<script>
+  var coll = document.getElementsByClassName("collapsible2");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+  </script>
+<!-- Third Grid -->
+<button type="button" class="collapsible3">Silver Route</button>
+<div class="content3">
       <div class ="silver">
       <h1>Silver</h1>
       <form method="post" action="{{ url_for('calc_result') }}" id="timeCalcFormSilver">
@@ -226,7 +266,25 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 
 
+</div>
 
+
+<script>
+  var coll = document.getElementsByClassName("collapsible3");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+  </script>
 
 
 
