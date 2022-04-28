@@ -1,3 +1,4 @@
+from xml.etree.ElementTree import tostring
 from flask import Flask, render_template, request, jsonify
 from CalculateFile import TimeCalculator
 from LinkedListLooping import LinkedListLooping
@@ -89,7 +90,15 @@ def calc_result():
    firstStop = routes_internal[firstStop]
    secondStop = routes_internal[secondStop]
    now = datetime.now()
-   median = calc.calculate_distance(original_file, firstStop, secondStop, now.hour, now.weekday(), now.month)
+
+   # This is just a placeholder value. [0 = gold, 1=green, 2=silver]
+   route_flag = 0
+   median = calc.calculate_distance(original_file, firstStop, secondStop, now.hour, now.weekday(), now.month, route_flag)
+   #Attempts a failsafe that will sum the time between every intermediate stop if the original median can't be calculated from end to end.
+   if not isinstance(median, int) and not isinstance(median, float):
+      print("Oops!")
+
+
    firstStop = dict_key_lookup(routes_internal, firstStop)
    secondStop = dict_key_lookup(routes_internal, secondStop)
    return render_template('Time Calculator.html', result = median, stop1 = firstStop, stop2 = secondStop, calcSuccess = True)

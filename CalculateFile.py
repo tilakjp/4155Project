@@ -6,17 +6,24 @@ original_file = pd.read_csv("merged_stop_data.csv", dtype = str)
 
 class TimeCalculator: 
 
-    def dataset_filter(self, dataset, start_stop, destination_stop):
+    def dataset_filter(self, dataset, start_stop, destination_stop, flag):
         file = dataset[dataset["Bus"] != "0"]
         file = file[file["Time"].notna()]
         file = file[file["Date"].notna()]
-        file = file[file["Route"].isin(["Gold", "Silver", "Green"])]
+
+        if flag == 0:
+            file = file[file["Route"].isin(["Gold"])]
+        if flag == 1:
+            file = file[file["Route"].isin(["Green"])]
+        if flag == 2:
+            file = file[file["Route"].isin(["Silver"])]
+
         file = file[file["Stop"].isin([start_stop, destination_stop])]
         return file
 
 
-    def calculate_distance(self, dataset, start_stop, destination_stop, hour, day, month):
-        filter = self.dataset_filter(dataset, start_stop, destination_stop)
+    def calculate_distance(self, dataset, start_stop, destination_stop, hour, day, month, flag):
+        filter = self.dataset_filter(dataset, start_stop, destination_stop, flag)
         time_column = [datetime.strptime(f"{date}_{time}", "%m/%d/%Y_%H:%M:%S") for time, date in zip(filter["Time"], filter["Date"])]
         filter = filter.assign(Converted_Time=time_column)
         times = []
