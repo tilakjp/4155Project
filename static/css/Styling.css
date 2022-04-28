@@ -1,4 +1,6 @@
 /* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
+/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+/*All code extracted was used for styling the webpage*/
 html{
     box-sizing:border-box
 }
@@ -7,7 +9,6 @@ html{
 *:after{
     box-sizing:inherit
 }
-/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
 html{
     -ms-text-size-adjust:100%;
     -webkit-text-size-adjust:100%
@@ -1380,6 +1381,8 @@ a{
     border-color:#e7ffff!important
 }
 
+
+/*All code from here and below was created by Team 12 */
 .gold{
 background-color: gold;
 margin-left: auto;
