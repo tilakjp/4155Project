@@ -16,7 +16,7 @@ html{
 
 
 body{
-    margin:0
+    margin:0px;
 }
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{
     display:block
@@ -78,6 +78,11 @@ figure{
 }
 img{
     border-style:none
+}
+
+.p-padding{
+    margin-left :auto;
+    margin-right: 50px;
 }
 code,kbd,pre,samp{
     font-family:monospace,monospace;
@@ -1020,7 +1025,7 @@ a{
     margin-bottom:16px!important
 }
 .w3-margin{
-    margin:16px!important
+    margin:32px!important
 }
 .w3-margin-top{
     margin-top:16px!important
@@ -1060,8 +1065,10 @@ a{
     padding-bottom:48px!important
 }
 .w3-padding-64{
-    padding-top:64px!important;
-    padding-bottom:64px!important
+    padding-top:128px!important;
+    padding-bottom:128px!important;
+    padding-left: 128px;
+    padding-right: 128px;
 }
 .w3-padding-top-64{
     padding-top:64px!important

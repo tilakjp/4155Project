@@ -93,7 +93,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         <br/>
         <!-- Hidden input used to determine the route the calculation is being done for. -->
         <input type="hidden" name="Route" value="0"/>
-        <input type="submit" value="Calculate" class="w3-button w3-black w3-padding-large w3-large w3-margin-top"/>
+        <input type="submit" value="Calculate" class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-margin-bottom"/>
       </form>
     
 
@@ -116,8 +116,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       var content = this.nextElementSibling;
       if (content.style.display === "block") {
         content.style.display = "none";
+        localStorage.setItem('show1', 'false'); //store state in localStorage
       } else {
         content.style.display = "block";
+        localStorage.setItem('show1', 'true'); //store state in localStorage
       }
     });
   }
@@ -174,7 +176,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <br/>
       <!-- Hidden input used to determine the route the calculation is being done for. -->
       <input type="hidden" name="Route" value="1"/>
-      <input type="submit" value="Calculate" class="w3-button w3-black w3-padding-large w3-large w3-margin-top"/>
+      <input type="submit" value="Calculate" class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-margin-bottom"/>
     </form>
   
 
@@ -199,12 +201,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       var content = this.nextElementSibling;
       if (content.style.display === "block") {
         content.style.display = "none";
+        localStorage.setItem('show2', 'false'); //store state in localStorage
       } else {
         content.style.display = "block";
+        localStorage.setItem('show2', 'true'); //store state in localStorage
       }
     });
   }
-  </script>
+</script>
 <!-- Third Grid -->
 <button type="button" class="collapsible3">Silver Route</button>
 <div class="content3">
@@ -261,7 +265,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         <br/>
         <!-- Hidden input used to determine the route the calculation is being done for. -->
         <input type="hidden" name="Route" value="2"/>
-        <input type="submit" value="Calculate" class="w3-button w3-black w3-padding-large w3-large w3-margin-top"/>
+        <input type="submit" value="Calculate" class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-margin-bottom"/>
       </form>
     
       {% if calcSuccess == True %}
@@ -286,24 +290,44 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       var content = this.nextElementSibling;
       if (content.style.display === "block") {
         content.style.display = "none";
+        localStorage.setItem('show3', 'false'); //store state in localStorage
       } else {
         content.style.display = "block";
+        localStorage.setItem('show3', 'true'); //store state in localStorage
       }
     });
   }
+
+  window.onload = function() {
+
+    // Keeps the dropdown open using 'show3'
+    var show = localStorage.getItem('show3');
+    if(show === 'true'){
+      const c = document.querySelectorAll(".content3");
+      c.forEach(col => {
+          col.style.display = "block"
+      });
+    }
+
+    // Keeps the dropdown open using 'show2'
+    var show = localStorage.getItem('show2');
+    if(show === 'true'){
+      const c = document.querySelectorAll(".content2");
+      c.forEach(col => {
+          col.style.display = "block"
+      });
+    }
+
+    // Keeps the dropdown open using 'show1'
+    var show = localStorage.getItem('show1');
+    if(show === 'true'){
+      const c = document.querySelectorAll(".content1");
+      c.forEach(col => {
+          col.style.display = "block"
+      });
+    }
+  }
   </script>
-
-
-
-
-
-
-
-
-
-     
-
-      
 
   </div>
 </div>
@@ -328,6 +352,7 @@ function myFunction() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+
 </script>
 
 </body>
