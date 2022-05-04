@@ -1,8 +1,23 @@
 import pandas as pd
 from datetime import datetime
 from statistics import *
+from LinkedListLooping import LinkedListLooping
+from RoutesDict import routes_internal, dict_key_lookup
 
 original_file = pd.read_csv("merged_stop_data.csv", dtype = str)
+
+#Initialize a looping linked list of stops for each of the three routes. Uses shorthand names.
+ll_gold = LinkedListLooping(["lightrail", "studenthealth", "fretwellS", "catoS", "robinsonS",
+                           "levine", "hunt", "alumni", "reese", "robinsonN", "catoN", "fretwellN",
+                           "science", "studentu", "belk"])
+
+ll_green = LinkedListLooping(["lightrailW", "belkS", "unionE", "auxE", "fretwellS", "catoS", "robinsonS",
+                           "reeseW", "coneW", "southVillage", "robinsonN", "catoN", "fretwellN", "studenthealthN",
+                           "fm/pps", "northdeck"])
+
+ll_silver = LinkedListLooping(["CRIdeck", "dukecentE", "Grigg Hall", "EPIC South", "athleticsE", "unionE",
+                              "unionE", "auxE", "alumniW", "studenthealthN", "martin", "lot6", "lot5A", "eastdeck2",
+                              "fretwellN", "science", "unionW", "athleticsW", "EPIC North", "motorsports", "PORTALW"])
 
 class TimeCalculator: 
 
@@ -50,8 +65,37 @@ class TimeCalculator:
         
         filtered_time = [int(t) for t in times if t < 20]
         if(len(filtered_time) == 0):
+            # Attempts a failsafe that will sum the time between every intermediate stop if the original median can't be calculated from end to end.
             if failsafe == 0:
-                return -1, []
+                print("Failsafe entered!")                
+                med = 0
+                if flag == 0:
+                    # Retrieve the current stop using start_stop and the next stop on the route.
+                    curr = ll_gold.findNode(dict_key_lookup(routes_internal, start_stop))
+                    next = curr.next
+                    # Loop through each node and calculate each intermediate travel time.
+                    while next.data != ll_gold.findNode(dict_key_lookup(routes_internal, destination_stop)).next.data:
+                        med += self.calculate_distance(dataset, curr.data, next.data, hour, day, month, flag, 1)
+                        curr = next
+                        next = curr.next
+                elif flag == 1:
+                    curr = ll_green.findNode(dict_key_lookup(routes_internal, start_stop))
+                    next = curr.next
+
+                    while next.data != ll_green.findNode(dict_key_lookup(routes_internal, destination_stop)).next.data:
+                        med += self.calculate_distance(dataset, curr.data, next.data, hour, day, month, flag, 1)
+                        curr = next
+                        next = curr.next
+                else:
+                    curr = ll_silver.findNode(dict_key_lookup(routes_internal, start_stop))
+                    next = curr.next
+
+                    while next.data != ll_silver.findNode(dict_key_lookup(routes_internal, destination_stop)).next.data:
+                        med += self.calculate_distance(dataset, curr.data, next.data, hour, day, month, flag, 1)
+                        curr = next
+                        next = curr.next
+
+                return med
             else:
                 return 1
         print(f"Median at hour {hour} on weekday {day + 1} in month {month} of 2021: {median(filtered_time)} minutes.")
