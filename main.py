@@ -143,7 +143,7 @@ def calc_result():
          median = 2
    ##firstStop = dict_key_lookup(routes_internal, firstStop)
    ##secondStop = dict_key_lookup(routes_internal, secondStop)
-   return render_template('Time Calculator.html', result = median, stop1 = firstStop, stop2 = secondStop, calcSuccess = True)
+   return render_template('Time Calculator.html', result = median, stop1 = firstStop, stop2 = secondStop, calcSuccess = True, route = route_flag)
 
 ### Helper Functions ###
 # Given a dictionary and a value, finds the key associated with that value in the dictionary.

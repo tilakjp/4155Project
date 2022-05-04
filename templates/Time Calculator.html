@@ -97,7 +97,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       </form>
     
 
-      {% if calcSuccess == True %}
+      {% if calcSuccess == True and route == 0 %}
       <br/>
       <p>The calculation for {{stop1}} and {{stop2}} is: {{result}} minute(s)</p>
     {% endif %}    
@@ -180,7 +180,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     </form>
   
 
-    {% if calcSuccess == True %}
+    {% if calcSuccess == True and route == 1 %}
     <br/>
     <p>The calculation for {{stop1}} and {{stop2}} is: {{result}} minute(s)</p>
   {% endif %}
@@ -268,7 +268,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         <input type="submit" value="Calculate" class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-margin-bottom"/>
       </form>
     
-      {% if calcSuccess == True %}
+      {% if calcSuccess == True and route == 2 %}
         <br/>
         <p>The calculation for {{stop1}} and {{stop2}} is: {{result}} minute(s)</p>
       {% endif %}
