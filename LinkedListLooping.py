@@ -34,5 +34,15 @@ class LinkedListLooping:
         while curr.data != value:
             curr = curr.next
         return curr.data
+
+    def findNode(self, value):
+        curr = self.head
+        print(curr.data + " from findNode")
+        print(value + " from findNode")
+        while curr.data != value:
+            print("Finding node...")
+            curr = curr.next
+        print("Node found!")
+        return curr
         
 

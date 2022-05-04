@@ -91,26 +91,68 @@ def calc_result():
    secondStop = routes_internal[secondStop]
    now = datetime.now()
 
-   # This is just a placeholder value. [0 = gold, 1=green, 2=silver]
-   route_flag = 0
-   median = calc.calculate_distance(original_file, firstStop, secondStop, now.hour, now.weekday(), now.month, route_flag)
-   #Attempts a failsafe that will sum the time between every intermediate stop if the original median can't be calculated from end to end.
+   # For route_flag, [0 = gold, 1 = green, 2 = silver]
+   route_flag = int(request.form['Route'])
+   median = calc.calculate_distance(original_file, firstStop, secondStop, now.hour, now.weekday(), now.month, route_flag, 0)
+
+   # If result is null, attempts a failsafe that will sum the time between every intermediate stop if the original median can't be calculated from end to end.
    if not isinstance(median, int) and not isinstance(median, float):
-      print("Oops!")
+      print("Failsafe! for route " + str(route_flag) + " on: " + firstStop + " -> " + secondStop)
+      median = 0
+      if route_flag == 0:
+         # Retrieve the current stop using firstStop and the next stop on the route.
+         print("Code before ll_gold.findNode()")
+         curr = ll_gold.findNode(dict_key_lookup(routes_internal, firstStop))
+         print(curr.data)
+         next = curr.next
+         print (next.data)
+         # Loop through each node and calculate each intermediate travel time.
+         while next.data != ll_gold.findNode(dict_key_lookup(routes_internal, secondStop)).next.data:
+            median += calc.calculate_distance(original_file, curr.data, next.data, now.hour, now.weekday(), now.month, route_flag, 1)
+            print(median)
+            curr = next
+            next = curr.next
+      elif route_flag == 1:
+         # Retrieve the current stop using firstStop and the next stop on the route.
+         curr = ll_green.findNode(dict_key_lookup(routes_internal, firstStop))
+         next = curr.next         
+         # Loop through each node and calculate each intermediate travel time.
+         while not next.data == ll_green.findNode(dict_key_lookup(routes_internal, secondStop)).next.data:
+            median += calc.calculate_distance(original_file, curr.data, next.data, now.hour, now.weekday(), now.month, route_flag, 1)            
+            curr = next
+            next = curr.next
+      else:
+         # Retrieve the current stop using firstStop and the next stop on the route.
+         curr = ll_silver.findNode(dict_key_lookup(routes_internal, firstStop))
+         next = curr.next
+         # Loop through each node and calculate each intermediate travel time.
+         while not next.data == ll_silver.findNode(dict_key_lookup(routes_internal, secondStop)).next.data:
+            median += calc.calculate_distance(original_file, curr.data, next.data, now.hour, now.weekday(), now.month, route_flag, 1)            
+            curr = next
+            next = curr.next   
 
-
-   firstStop = dict_key_lookup(routes_internal, firstStop)
-   secondStop = dict_key_lookup(routes_internal, secondStop)
+   # If the two stops are subsequent, check to make sure the calculated median time makes sense and correct it if necessary.
+   if route_flag == 0:
+      if ll_gold.findNode(dict_key_lookup(routes_internal, firstStop)).next.data == ll_gold.findNode(dict_key_lookup(routes_internal, secondStop)).data and median >= 5:
+         median = 2
+   elif route_flag == 1:
+      if ll_green.findNode(dict_key_lookup(routes_internal, firstStop)).next.data == ll_green.findNode(dict_key_lookup(routes_internal, secondStop)).data and median >= 5:
+         median = 2
+   else:
+      if ll_silver.findNode(dict_key_lookup(routes_internal, firstStop)).next.data == ll_silver.findNode(dict_key_lookup(routes_internal, secondStop)).data and median >= 5:
+         median = 2
+   ##firstStop = dict_key_lookup(routes_internal, firstStop)
+   ##secondStop = dict_key_lookup(routes_internal, secondStop)
    return render_template('Time Calculator.html', result = median, stop1 = firstStop, stop2 = secondStop, calcSuccess = True)
 
 ### Helper Functions ###
-#Given a dictionary and a value, finds the key associated with that value in the dictionary.
-#Used for reverese lookups.
+# Given a dictionary and a value, finds the key associated with that value in the dictionary.
+# Used for reverese lookups.
 def dict_key_lookup(dict, val):
    goalKey = ""
    for key in dict.keys():
       if dict[key] == val:
-         goalKey = dict[key]
+         goalKey = key
          break
    return goalKey
 

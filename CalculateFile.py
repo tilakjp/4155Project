@@ -22,7 +22,7 @@ class TimeCalculator:
         return file
 
 
-    def calculate_distance(self, dataset, start_stop, destination_stop, hour, day, month, flag):
+    def calculate_distance(self, dataset, start_stop, destination_stop, hour, day, month, flag, failsafe):
         filter = self.dataset_filter(dataset, start_stop, destination_stop, flag)
         time_column = [datetime.strptime(f"{date}_{time}", "%m/%d/%Y_%H:%M:%S") for time, date in zip(filter["Time"], filter["Date"])]
         filter = filter.assign(Converted_Time=time_column)
@@ -50,6 +50,9 @@ class TimeCalculator:
         
         filtered_time = [int(t) for t in times if t < 20]
         if(len(filtered_time) == 0):
-            return -1, []
+            if failsafe == 0:
+                return -1, []
+            else:
+                return 1
         print(f"Median at hour {hour} on weekday {day + 1} in month {month} of 2021: {median(filtered_time)} minutes.")
         return min(filtered_time)
