@@ -16,7 +16,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
 </style>
 
-
 </head>
 <body>
 
@@ -54,9 +53,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="content1">
       <div class ="gold">
       <h1>Gold</h1>
-      <form method="post" action="{{ url_for('calc_result') }}" id="timeCalcFormGold">
-        <label for="Stop1">Starting At:</label>
-        <select name="Stop1" id="Stop1">
+      <form method="post" action="{{ url_for('calc_result') }}" id="timeCalcFormGold" onsubmit="storeGold()">
+        <label for="Stop1Gold">Starting At:</label>
+        <select name="Stop1Gold" id="Stop1Gold" onload="retrieveGold()">
           <option value="lightrail">Wallis Hall/Light Rail</option>
           <option value="studenthealth">FM/PPS/Student Health East</option>
           <option value="fretwellS">Fretwell South</option>
@@ -75,8 +74,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         </select>
       
         <br/>
-        <label for="Stop2">Stopping At:</label>
-        <select name="Stop2" id="Stop2">
+        <label for="Stop2Gold">Stopping At:</label>
+        <select name="Stop2Gold" id="Stop2Gold">
           <option value="studenthealth">FM/PPS/Student Health East</option>        
           <option value="lightrail">Wallis Hall/Light Rail</option>
           <option value="fretwellS">Fretwell South</option>
@@ -98,7 +97,28 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         <input type="hidden" name="Route" value="0"/>
         <input type="submit" value="Calculate" class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-margin-bottom"/>
       </form>
-    
+      <script>
+        function storeGold() {
+          var stop1Gold = document.getElementById("Stop1Gold").value;
+          var stop2Gold = document.getElementById("Stop2Gold").value;
+          sessionStorage.setItem("stop1Gold", stop1Gold);
+          sessionStorage.setItem("stop2Gold", stop2Gold);
+          if (sessionStorage.getItem("stop1Green")) sessionStorage.removeItem("stop1Green");
+          if (sessionStorage.getItem("stop2Green")) sessionStorage.removeItem("stop2Green");
+          if (sessionStorage.getItem("stop1Silver")) sessionStorage.removeItem("stop1Silver");
+          if (sessionStorage.getItem("stop2Silver")) sessionStorage.removeItem("stop2Silver");
+        }
+        function retrieveGold() {
+          const $selectStop1Gold = document.querySelector('#Stop1Gold');
+          const $selectStop2Gold = document.querySelector('#Stop2Gold');
+          if (sessionStorage.getItem("stop1Gold")) {
+            $selectStop1Gold.value = sessionStorage.getItem("stop1Gold");
+          }
+          if (sessionStorage.getItem("stop2Gold")) {
+            $selectStop2Gold.value = sessionStorage.getItem("stop2Gold");
+          }
+        }
+      </script>
 
       {% if calcSuccess == True and route == 0 %}
       <br/>
@@ -136,9 +156,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <div class="green">
       <h1>Green</h1>
 
-    <form method="post" action="{{ url_for('calc_result') }}" id="timeCalcFormGreen">
-      <label for="Stop1">Starting At:</label>
-      <select name="Stop1" id="Stop1">
+    <form method="post" action="{{ url_for('calc_result') }}" id="timeCalcFormGreen" onsubmit="storeGreen()">
+      <label for="Stop1Green">Starting At:</label>
+      <select name="Stop1Green" id="Stop1Green">
         <option value="lightrailW">Wallis Hall West/Light Rail</option>
         <option value="belkS">Belk Hall South</option>
         <option value="unionE">Student Union East</option>
@@ -157,8 +177,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         <option value="northdeck">North Deck</option>
       </select>
       <br/>
-      <label for="Stop2">Stopping At:</label>
-      <select name="Stop2" id="Stop2">               
+      <label for="Stop2Green">Stopping At:</label>
+      <select name="Stop2Green" id="Stop2Green">               
         <option value="belkS">Belk Hall South</option>     
         <option value="lightrailW">Wallis Hall West/Light Rail</option>
         <option value="unionE">Student Union East</option>
@@ -181,7 +201,24 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <input type="hidden" name="Route" value="1"/>
       <input type="submit" value="Calculate" class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-margin-bottom"/>
     </form>
-  
+    <script>
+      function storeGreen() {
+        var stop1Green = document.getElementById("Stop1Green").value;
+        var stop2Green = document.getElementById("Stop2Green").value;
+        sessionStorage.setItem("stop1Green", stop1Green);
+        sessionStorage.setItem("stop2Green", stop2Green);
+      }
+      function retrieveGreen() {
+        const $selectStop1Green = document.querySelector('#Stop1Green');
+        const $selectStop2Green = document.querySelector('#Stop2Green');
+        if (sessionStorage.getItem("stop1Green")) {
+          $selectStop1Green.value = sessionStorage.getItem("stop1Green");
+        }
+        if (sessionStorage.getItem("stop2Green")) {
+          $selectStop2Green.value = sessionStorage.getItem("stop2Green");
+        }
+      }
+    </script>
 
     {% if calcSuccess == True and route == 1 %}
     <br/>
@@ -218,9 +255,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="content3">
       <div class ="silver">
       <h1>Silver</h1>
-      <form method="post" action="{{ url_for('calc_result') }}" id="timeCalcFormSilver">
-        <label for="Stop1">Starting At:</label>
-        <select name="Stop1" id="Stop1">
+      <form method="post" action="{{ url_for('calc_result') }}" id="timeCalcFormSilver" onsubmit="storeSilver()">
+        <label for="Stop1Silver">Starting At:</label>
+        <select name="Stop1Silver" id="Stop1Silver">
           <option value="CRIdeck">CRI Deck</option>
           <option value="dukecentE">Duke Centennial Hall East</option>
           <option value="Grigg Hall">Grigg Hall</option>
@@ -243,8 +280,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
           <option value="PORTALW">PORTAL West</option>
         </select>
         <br/>
-        <label for="Stop2">Stopping At:</label>
-        <select name="Stop2" id="Stop2">          
+        <label for="Stop2Silver">Stopping At:</label>
+        <select name="Stop2Silver" id="Stop2Silver">          
           <option value="dukecentE">Duke Centennial Hall East</option>
           <option value="CRIdeck">CRI Deck</option>
           <option value="Grigg Hall">Grigg Hall</option>
@@ -271,7 +308,24 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         <input type="hidden" name="Route" value="2"/>
         <input type="submit" value="Calculate" class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-margin-bottom"/>
       </form>
-    
+      <script>
+        function storeSilver() {
+          var stop1Silver = document.getElementById("Stop1Silver").value;
+          var stop2Silver = document.getElementById("Stop2Silver").value;
+          sessionStorage.setItem("stop1Silver", stop1Silver);
+          sessionStorage.setItem("stop2Silver", stop2Silver);
+        }
+        function retrieveSilver() {
+          const $selectStop1Silver = document.querySelector('#Stop1Silver');
+          const $selectStop2Silver = document.querySelector('#Stop2Silver');
+          if (sessionStorage.getItem("stop1Silver")) {
+            $selectStop1Silver.value = sessionStorage.getItem("stop1Silver");
+          }
+          if (sessionStorage.getItem("stop2Silver")) {
+            $selectStop2Silver.value = sessionStorage.getItem("stop2Silver");
+          }
+        }
+      </script>
       {% if calcSuccess == True and route == 2 %}
         <br/>
         <h3>Time between {{stop1}} and {{stop2}} is: {{result}} minute(s)</h3>
@@ -358,6 +412,12 @@ function myFunction() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  retrieveGold();
+  retrieveGreen();
+  retrieveSilver();
+});
 
 </script>
 

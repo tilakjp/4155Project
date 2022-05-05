@@ -46,14 +46,23 @@ def time_calculator():
 
 @app.route('/calc_result/', methods=['POST'])
 def calc_result():
-   firstStop = request.form['Stop1']
-   secondStop = request.form['Stop2']
+   # For route_flag, [0 = gold, 1 = green, 2 = silver]
+   route_flag = int(request.form['Route'])
+   if route_flag == 0:
+      firstStop = request.form['Stop1Gold']
+      secondStop = request.form['Stop2Gold']
+   elif route_flag == 1:
+      firstStop = request.form['Stop1Green']
+      secondStop = request.form['Stop2Green']
+   else:
+      firstStop = request.form['Stop1Silver']
+      secondStop = request.form['Stop2Silver']
+      
    firstStop = routes_internal[firstStop]
    secondStop = routes_internal[secondStop]
    now = datetime.now()
 
-   # For route_flag, [0 = gold, 1 = green, 2 = silver]
-   route_flag = int(request.form['Route'])
+   
    filter = calc.route_filter(original_file, firstStop, secondStop, route_flag)
    median = calc.calculate_distance(filter, firstStop, secondStop, now.hour, now.weekday(), now.month, route_flag, 0)
    ch = calc.save_forcast_graph(original_file, firstStop, secondStop, route_flag)
