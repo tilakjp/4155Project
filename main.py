@@ -5,6 +5,8 @@ from RoutesDict import routes_internal, dict_key_lookup
 from LinkedListLooping import LinkedListLooping
 import pandas as pd
 from datetime import datetime
+import json
+import html
 
 app = Flask(__name__)
 
@@ -24,19 +26,28 @@ ll_silver = LinkedListLooping(["CRIdeck", "dukecentE", "Grigg Hall", "EPIC South
                               "unionE", "auxE", "alumniW", "studenthealthN", "martin", "lot6", "lot5A", "eastdeck2",
                               "fretwellN", "science", "unionW", "athleticsW", "EPIC North", "motorsports", "PORTALW"])
 
+
 ### Site Pages ###
 @app.route('/')
 def home():
    return render_template('main.html')
+
+
 @app.route('/Routes/')
 def routes():
    return render_template('Routes.html')
+
+
+
+
 @app.route('/Route Updates/')
 def route_updates():
    return render_template('Route Updates.html')
+
+
 @app.route('/Time Calculator/', methods=['GET'])
 def time_calculator():
-  return render_template('Time Calculator.html')
+   return render_template('Time Calculator.html')
 
 @app.route('/calc_result/', methods=['POST'])
 def calc_result():
@@ -48,8 +59,11 @@ def calc_result():
 
    # For route_flag, [0 = gold, 1 = green, 2 = silver]
    route_flag = int(request.form['Route'])
-   median = calc.calculate_distance(original_file, firstStop, secondStop, now.hour, now.weekday(), now.month, route_flag, 0)
-   
+   filter = calc.route_filter(original_file, firstStop, secondStop, route_flag)
+   median = calc.calculate_distance(filter, firstStop, secondStop, now.hour, now.weekday(), now.month, route_flag, 0)
+   ch = calc.save_forcast_graph(original_file, firstStop, secondStop, route_flag)
+   # Creating the json graph
+
    # If the two stops are subsequent, check to make sure the calculated median time makes sense and correct it if necessary.
    if route_flag == 0:
       if ll_gold.findNode(dict_key_lookup(routes_internal, firstStop)).next.data == ll_gold.findNode(dict_key_lookup(routes_internal, secondStop)).data and median >= 5:
@@ -62,7 +76,8 @@ def calc_result():
          median = 1
    ##firstStop = dict_key_lookup(routes_internal, firstStop)
    ##secondStop = dict_key_lookup(routes_internal, secondStop)
-   return render_template('Time Calculator.html', result = median, stop1 = firstStop, stop2 = secondStop, calcSuccess = True, route = route_flag)
+   return render_template('Time Calculator.html', result = median, stop1 = firstStop, stop2 = secondStop, calcSuccess = True, route = route_flag, chart=ch)
+
 
 if __name__ == '__main__':
    app.debug = True

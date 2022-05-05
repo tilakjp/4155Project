@@ -3,6 +3,7 @@
 <head>
 <title>Time Calculator</title>
 <!--W3 is credited for the skeleton outline of html code with regards to the CSS implemented -->
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/Styling.css') }}">
@@ -14,6 +15,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
 </style>
+
+
 </head>
 <body>
 
@@ -100,6 +103,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       {% if calcSuccess == True and route == 0 %}
       <br/>
       <p>The calculation for {{stop1}} and {{stop2}} is: {{result}} minute(s)</p>
+      <iframe srcdoc="{{chart}}" style="border:none;" width="600" height="600"></iframe>
+
     {% endif %}    
 
   </div>
@@ -183,6 +188,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     {% if calcSuccess == True and route == 1 %}
     <br/>
     <p>The calculation for {{stop1}} and {{stop2}} is: {{result}} minute(s)</p>
+    <iframe srcdoc="{{chart}}" style="border:none;" width="600" height="600"></iframe>
   {% endif %}
 
 
@@ -271,6 +277,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       {% if calcSuccess == True and route == 2 %}
         <br/>
         <p>The calculation for {{stop1}} and {{stop2}} is: {{result}} minute(s)</p>
+        <iframe srcdoc="{{chart}}" style="border:none;" width="600" height="600"></iframe>
+
       {% endif %}
     
 </div>
