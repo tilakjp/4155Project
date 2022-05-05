@@ -1435,9 +1435,15 @@ text-align: center;
     font-size: 25px;
   }
   
-  .active, .collapsible1:hover {
+  .active, .collapsible1:hover, .collapsible1:focus {
     background-color: gold;
+    
   }
+  .collapsible1:before, .collapsible1:visited,.collapsible1:after{
+    background-color: gold;
+
+  }
+  
   
   .content1 {
     padding: 0 18px;
@@ -1459,8 +1465,13 @@ text-align: center;
     font-size: 25px;
   }
   
-  .active, .collapsible2:hover {
+  .active, .collapsible2:hover, .collapsible2:focus {
     background-color: green;
+    
+  }
+  .collapsible2:before, .collapsible2:visited,.collapsible2:after{
+    background-color: green;
+
   }
   
   .content2 {
@@ -1483,8 +1494,13 @@ text-align: center;
     font-size: 25px;
   }
   
-  .active, .collapsible3:hover {
+  .active, .collapsible3:hover, .collapsible3:focus {
     background-color: silver;
+    
+  }
+  .collapsible3:before, .collapsible3:visited,.collapsible3:after{
+    background-color: silver;
+
   }
   
   .content3 {
