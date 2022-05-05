@@ -72,7 +72,35 @@ class TimeCalculator:
         filtered_time = [int(t) for t in times if t < 20 and t >= 1]
         if(len(filtered_time) == 0):
             if failsafe == 0:
-                return -1, []
+                print("Failsafe entered!")
+                med = 0
+                if flag == 0:
+                    # Retrieve the current stop using start_stop and the next stop on the route.
+                    curr = ll_gold.findNode(dict_key_lookup(routes_internal, start_stop))
+                    next = curr.next
+                    # Loop through each node and calculate each intermediate travel time.
+                    while next.data != ll_gold.findNode(dict_key_lookup(routes_internal, destination_stop)).next.data:
+                        med += self.calculate_distance(dataset, curr.data, next.data, hour, day, month, flag, 1)
+                        curr = next
+                        next = curr.next
+                elif flag == 1:
+                    curr = ll_green.findNode(dict_key_lookup(routes_internal, start_stop))
+                    next = curr.next
+
+                    while next.data != ll_green.findNode(dict_key_lookup(routes_internal, destination_stop)).next.data:
+                        med += self.calculate_distance(dataset, curr.data, next.data, hour, day, month, flag, 1)
+                        curr = next
+                        next = curr.next
+                else:
+                    curr = ll_silver.findNode(dict_key_lookup(routes_internal, start_stop))
+                    next = curr.next
+
+                    while next.data != ll_silver.findNode(dict_key_lookup(routes_internal, destination_stop)).next.data:
+                        med += self.calculate_distance(dataset, curr.data, next.data, hour, day, month, flag, 1)
+                        curr = next
+                        next = curr.next
+
+                return med
             else:
                 return 1
         return median(filtered_time)
