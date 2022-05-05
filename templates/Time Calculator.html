@@ -102,7 +102,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
       {% if calcSuccess == True and route == 0 %}
       <br/>
-      <p>The calculation for {{stop1}} and {{stop2}} is: {{result}} minute(s)</p>
+      <h3>Time between {{stop1}} and {{stop2}} is: {{result}} minute(s)</h3>
       <iframe srcdoc="{{chart}}" style="border:none;" width="600" height="600"></iframe>
 
     {% endif %}    
@@ -187,7 +187,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
     {% if calcSuccess == True and route == 1 %}
     <br/>
-    <p>The calculation for {{stop1}} and {{stop2}} is: {{result}} minute(s)</p>
+    <h3>Time between {{stop1}} and {{stop2}} is: {{result}} minute(s)</h3>
     <iframe srcdoc="{{chart}}" style="border:none;" width="600" height="600"></iframe>
   {% endif %}
 
@@ -276,7 +276,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     
       {% if calcSuccess == True and route == 2 %}
         <br/>
-        <p>The calculation for {{stop1}} and {{stop2}} is: {{result}} minute(s)</p>
+        <h3>Time between {{stop1}} and {{stop2}} is: {{result}} minute(s)</h3>
         <iframe srcdoc="{{chart}}" style="border:none;" width="600" height="600"></iframe>
 
       {% endif %}
