@@ -79,6 +79,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         sessionStorage.setItem("stop1Gold", stop1Gold);
         if (stop1Gold == "studenthealth") sessionStorage.setItem("stop2Gold", "fretwellS");
         else sessionStorage.setItem("stop2Gold", "studenthealth");
+        
+        localStorage.setItem('show1', 'true');
+        localStorage.setItem('show2', 'false');
+        localStorage.setItem('show3', 'false');
       }
     </script>
   </div>
@@ -119,7 +123,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         var stop1Green = document.getElementById("grRoutes").value;
         sessionStorage.setItem("stop1Green", stop1Green);
         if (stop1Green == "belkS") sessionStorage.setItem("stop2Green", "unionE");
-        else sessionStorage.setItem("stop2Green", "belkS");
+        else sessionStorage.setItem("stop2Green", "belkS");    
+
+        localStorage.setItem('show1', 'false');
+        localStorage.setItem('show2', 'true');
+        localStorage.setItem('show3', 'false');
       }
     </script>
   </div>
@@ -164,6 +172,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         sessionStorage.setItem("stop1Silver", stop1Silver);
         if (stop1Silver == "dukecentE") sessionStorage.setItem("stop2Silver", "Grigg Hall");
         else sessionStorage.setItem("stop2Silver", "Grigg Hall");
+
+        localStorage.setItem('show1', 'false');
+        localStorage.setItem('show2', 'false');
+        localStorage.setItem('show3', 'true');
       }
     </script>
   </div>
