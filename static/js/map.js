@@ -406,10 +406,15 @@ criDeck.bindPopup(criDeckTmp);
 let studentUniontmp = `
 
 <h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h3> Address: </h3>
+<h4> 8845 CRAVER RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Union West </b></h4>
+<h6> Silver </h6>
+<h6> Gold </h6>
+<h4><b> Union East </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
 
 `
 const studentUnion = L.polygon([
