@@ -137,6 +137,6 @@ class TimeCalculator:
 
         ).properties(
             width=500,
-            title="Bus Travel Time Forcast (Next Five Hours)"
+            title="Bus Travel Time Forecast (Next Five Hours)"
         )
         return chart.to_html()

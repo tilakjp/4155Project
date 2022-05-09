@@ -22,7 +22,6 @@ routes_internal = { "lightrail": "Wallis Hall E/Light Rail",
                         "reeseW": "Reese West",
                         "coneW": "Cone Deck W",
                         "southVillage": "South Village Deck",
-                        #gageUAE: -Gage Undergraduate Admissions Center East doesn't seem to exist in the data we were given.
                         "robinsonN": "Robinson Hall N",
                         "studenthealthN": "Student Health N",
                         "Facilities Management": "FM/Police Building",
