@@ -428,9 +428,17 @@ const studentUnion = L.polygon([
 }).addTo(map)
 studentUnion.bindPopup(studentUniontmp);
 
-//Cato College of Education
+// College of Education
+let collegeEduTmp = `
 
-const catoCollege = L.polygon([
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
+const collegeEdu = L.polygon([
    [35.307783, -80.734438],
    [35.307382, -80.734422],
    [35.307283, -80.734226],
@@ -445,9 +453,18 @@ const catoCollege = L.polygon([
    fillOpacity: 0.2,
 
 }).addTo(map)  
+collegeEdu.bindPopup(collegeEduTmp);
 
 //College of Health and Human Sciences
+let collegeHealthTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const collegeHealth = L.polygon([
    [35.307945, -80.733588],
    [35.307369, -80.733583],
@@ -465,9 +482,18 @@ const collegeHealth = L.polygon([
    fillOpacity: 0.2,
 
 }).addTo(map)  
+collegeHealth.bindPopup(collegeHealthTmp);
 
 //Burson
+let bursonTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const Burson = L.polygon([
    [35.307775, -80.733069],
    [35.307439, -80.733054],
@@ -482,9 +508,18 @@ const Burson = L.polygon([
    fillOpacity: 0.2,
 
 }).addTo(map)  
+Burson.bindPopup(bursonTmp);
 
 //Cameron
+let CameronTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const Cameron = L.polygon([
    [35.307920438216186, -80.73160747819938],
    [35.307432432774114, -80.73161170525938],
@@ -497,9 +532,18 @@ const Cameron = L.polygon([
    fillOpacity: 0.2,
 
 }).addTo(map)  
+Cameron.bindPopup(CameronTmp);
 
 // Auxiliary Building
+let AuxiliaryTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const Auxiliary = L.polygon([
    [35.30791379661371, -80.73063616731012],
    [35.30765277727951, -80.73063750858087],
@@ -516,9 +560,18 @@ const Auxiliary = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+Auxiliary.bindPopup(AuxiliaryTmp);
 
 // McEniry Building
+let mcEniryTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const mcEniry = L.polygon([
    [35.30741179606161, -80.73048264303307],
    [35.30733219193872, -80.73048471814926],
@@ -542,9 +595,18 @@ const mcEniry = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+mcEniry.bindPopup(mcEniryTmp);
 
 // McMillan Greenhouse
+let mcMillanTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const mcMillan = L.polygon([
    [35.308010656267236, -80.72985740978937],
    [35.307725035613736, -80.72985972993231],
@@ -560,9 +622,18 @@ const mcMillan = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+mcMillan.bindPopup(mcMillanTmp);
 
 // UREC
+let URECTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const urec = L.polygon([
    [35.30847097378254, -80.73625969699798],
    [35.30848993938839, -80.7349312852819],
@@ -576,9 +647,18 @@ const urec = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+urec.bindPopup(URECTmp);
 
 // Woodward
+let woodwardTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const woodward = L.polygon([
    [35.307683, -80.735981],
    [35.306814, -80.735982],
@@ -592,9 +672,18 @@ const woodward = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+woodward.bindPopup(woodwardTmp);
 
 // Smith
+let smithTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const smith = L.polygon([
    [35.30649613372966, -80.73180784956678],
    [35.307213906505545, -80.73175648736981],
@@ -608,9 +697,18 @@ const smith = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+smith.bindPopup(smithTmp);
 
 //Prospector
+let prospectorTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const prospector = L.polygon([
    [35.307173078968205, -80.7311068301639],
    [35.30700125337987, -80.73111018303453],
@@ -625,9 +723,18 @@ const prospector = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+prospector.bindPopup(prospectorTmp);
 
 //Halton Arena
+let haltonTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const halton = L.polygon([
    [35.30698714379311, -80.73482300394835],
    [35.30698714234626, -80.7338485357297],
@@ -646,9 +753,18 @@ const halton = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+halton.bindPopup(haltonTmp);
 
 //Atkins
+let atkinsTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const atkins = L.polygon([
    [35.3061892984254, -80.73295220187923],
    [35.305631324103516, -80.73291131861764],
@@ -664,9 +780,18 @@ const atkins = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+atkins.bindPopup(atkinsTmp);
 
 //Kennedy
+let kennedyTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const kennedy = L.polygon([
    [35.30614943314596, -80.73123495459573],
    [35.30614403791728, -80.73072544191382],
@@ -678,9 +803,18 @@ const kennedy = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+kennedy.bindPopup(kennedyTmp);
 
 //Belk Hall
+let belkTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const belk = L.polygon([
    [35.306627, -80.730288],
    [35.305999, -80.730268],
@@ -692,9 +826,18 @@ const belk = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+belk.bindPopup(belkTmp);
 
 //Fretwell
+let fretwellTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const fretwell = L.polygon([
    [35.30650013709477, -80.72945292674801],
    [35.30585137652176, -80.7294514947358],
@@ -706,9 +849,18 @@ const fretwell = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+fretwell.bindPopup(fretwellTmp);
 
 //Cato
+let catoTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const cato = L.polygon([
    [35.30567958126042, -80.72890394863911],
    [35.30524264000015, -80.72889819149982],
@@ -720,9 +872,18 @@ const cato = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+cato.bindPopup(catoTmp);
 
 //Denny
+let dennyTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const denny = L.polygon([
    [35.30561156427333, -80.72959304661062],
    [35.30560062092841, -80.73003561126166],
@@ -734,9 +895,18 @@ const denny = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+denny.bindPopup(dennyTmp);
 
 //Barnard
+let barnardTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const barnard = L.polygon([
    [35.30589174443227, -80.73022001329541],
    [35.30570733007773, -80.73021934268206],
@@ -748,9 +918,18 @@ const barnard = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+barnard.bindPopup(barnardTmp);
 
 //Garinger
+let garingerTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const garinger = L.polygon([
    [35.305084611109535, -80.73022173493898],
    [35.30490183657388, -80.73022106371779],
@@ -762,9 +941,18 @@ const garinger = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+garinger.bindPopup(garingerTmp);
 
 //Macy
+let macyTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const macy = L.polygon([
    [35.30589794461378, -80.7305183217944],
    [35.305468855740656, -80.73051104231267],
@@ -776,9 +964,18 @@ const macy = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+macy.bindPopup(macyTmp);
 
 //Winningham
+let winninghamTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const winningham = L.polygon([
    [35.30533286817984, -80.73052240057575],
    [35.305329899216034, -80.73026587178636],
@@ -790,9 +987,18 @@ const winningham = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+winningham.bindPopup(winninghamTmp);
 
 //King
+let kingTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const king = L.polygon([
    [35.30523309060404, -80.73274157613017],
    [35.305229806921425, -80.73235801974067],
@@ -804,9 +1010,18 @@ const king = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+king.bindPopup(kingTmp);
 
 //Reese
+let reeseTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const reese = L.polygon([
    [35.30476463295342, -80.73272598424249],
    [35.30455394901659, -80.73272665446478],
@@ -818,9 +1033,18 @@ const reese = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+reese.bindPopup(reeseTmp);
 
 //Colvard
+let colvardTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const colvard = L.polygon([
    [35.30532256895937, -80.73211345952484],
    [35.30446667404195, -80.73211939506122],
@@ -833,9 +1057,18 @@ const colvard = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+colvard.bindPopup(colvardTmp);
 
 //Rowe
+let roweTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const rowe = L.polygon([
    [35.30477311540296, -80.7310851519018],
    [35.30417179786087, -80.73108716789702],
@@ -848,9 +1081,18 @@ const rowe = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+rowe.bindPopup(roweTmp);
 
 //Storrs
+let storrsTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const storrs = L.polygon([
    [35.304249511235845, -80.72956596113093],
    [35.30480548828722, -80.72954448930487],
@@ -866,9 +1108,18 @@ const storrs = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+storrs.bindPopup(storrsTmp);
 
 //Robinson
+let robinsonTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const robinson = L.polygon([
    [35.30428015697671, -80.73028747361472],
    [35.30337393222653, -80.73028747061032],
@@ -880,9 +1131,18 @@ const robinson = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+robinson.bindPopup(robinsonTmp);
 
 //Belk Gym
+let belkGymTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const belkGym = L.polygon([
    [35.30555532513589, -80.7362739125449],
    [35.305219507070504, -80.73623650012652],
@@ -900,9 +1160,18 @@ const belkGym = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+belkGym.bindPopup(belkGymTmp);
 
 //Cone centre
+let coneTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const cone = L.polygon([
    [35.30559686696151, -80.73348183448381],
    [35.30515342591603, -80.73349248857427],
@@ -919,9 +1188,18 @@ const cone = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+cone.bindPopup(coneTmp);
 
 //Memorial Hall
+let memorialTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const memorial = L.polygon([
    [35.30390443987521, -80.73607218854794],
    [35.30377097849122, -80.73607120275717],
@@ -939,9 +1217,18 @@ const memorial = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+memorial.bindPopup(memorialTmp);
 
 //SoVi Crossing
+let soviCrossingTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const soviCrossing = L.polygon([
    [35.30322230406711, -80.73480577184633],
    [35.30313438305352, -80.73496765688802],
@@ -961,9 +1248,18 @@ const soviCrossing = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+soviCrossing.bindPopup(soviCrossingTmp);
 
 //Sanford
+let sanfordTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const sanford = L.polygon([
    [35.303229410230344, -80.73368168632187],
    [35.30291937142064, -80.73367867882719],
@@ -975,9 +1271,17 @@ const sanford = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
-
+sanford.bindPopup(sanfordTmp)
 //Levine Hall
+let levineTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const levine = L.polygon([
    [35.30358515632682, -80.73273726719924],
    [35.30329713895302, -80.73274324933692],
@@ -995,9 +1299,18 @@ const levine = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+levine.bindPopup(levineTmp);
 
 //Housing and residence 
+let housingResidenceTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const housingResidence = L.polygon([
    [35.302342117259805, -80.73387178078654],
    [35.30206247330573, -80.73387379227698],
@@ -1012,9 +1325,18 @@ const housingResidence = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+housingResidence.bindPopup(housingResidenceTmp);
 
 //Scott Hall 
+let scottTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const scott = L.polygon([
    [35.3018638849098, -80.73546337093251],
    [35.30160624626936, -80.73547407159482],
@@ -1027,9 +1349,18 @@ const scott = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+scott.bindPopup(scottTmp);
 
 //Laurel Hall
+let laurelTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const laurel = L.polygon([
    [35.302478759897966, -80.7368095564767],
    [35.30264078230883, -80.73705018218676],
@@ -1045,9 +1376,18 @@ const laurel = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+laurel.bindPopup(laurelTmp);
 
 //Holshouser Hall
+let holshouserTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const holshouser = L.polygon([
    [35.30228674468751, -80.73623464614425],
    [35.30203986695994, -80.73623387046013],
@@ -1059,9 +1399,18 @@ const holshouser = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+holshouser.bindPopup(holshouserTmp);
 
 //Hunt Hall
+let huntTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const hunt = L.polygon([
    [35.30211192746607, -80.73664977977556],
    [35.3012833592438, -80.73663749649342],
@@ -1075,9 +1424,18 @@ const hunt = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+hunt.bindPopup(huntTmp);
 
 //Facilities Operations and Science
+let scienceTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const science = L.polygon([
    [35.30874454335414, -80.73032121658436],
    [35.30820289685767, -80.73031956560726],
@@ -1089,9 +1447,18 @@ const science = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+science.bindPopup(scienceTmp);
 
 //Sycamore
+let sycamoreTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const sycamore = L.polygon([
    [35.30904621019996, -80.72884190884258],
    [35.308742803102234, -80.729215645473],
@@ -1103,9 +1470,18 @@ const sycamore = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+sycamore.bindPopup(sycamoreTmp);
 
 //Hickory 
+let hickoryTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const hickory = L.polygon([
    [35.30911179011983, -80.72919724947772],
    [35.30903119796649, -80.72909655363253],
@@ -1117,9 +1493,18 @@ const hickory = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+hickory.bindPopup(hickoryTmp);
 
 //Cedar 
+let cedarTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const cedar = L.polygon([
    [35.30947621092879, -80.72918031755816],
    [35.30976913674545, -80.72882149087035],
@@ -1131,9 +1516,18 @@ const cedar = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+cedar.bindPopup(cedarTmp);
 
 //Cafe Activities Building
+let cabTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const cab = L.polygon([
    [35.309239491212594, -80.72852138590501],
    [35.30895052269496, -80.72850501015554],
@@ -1152,9 +1546,18 @@ const cab = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+cab.bindPopup(cabTmp);
 
 //Martin Hall
+let martinTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const martin = L.polygon([
    [35.310609994724594, -80.72788023179908],
    [35.31017010950789, -80.72815330117749],
@@ -1166,9 +1569,18 @@ const martin = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+martin.bindPopup(martinTmp);
 
 //Hawthorn Hall
+let hawthornTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const hawthorn = L.polygon([
    [35.31137182177533, -80.72794564338241],
    [35.31136212350505, -80.72692500227143],
@@ -1184,9 +1596,18 @@ const hawthorn = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+hawthorn.bindPopup(hawthornTmp);
 
 //Price 
+let priceTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const price = L.polygon([
    [35.310364511120284, -80.73031030120602],
    [35.31035380584848, -80.72977904282158],
@@ -1198,9 +1619,18 @@ const price = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+price.bindPopup(priceTmp);
 
 //SHC
+let shcTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const shc = L.polygon([
    [35.3109034160578, -80.72987218855623],
    [35.31074637258851, -80.72991979793468],
@@ -1216,9 +1646,18 @@ const shc = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+shc.bindPopup(shcTmp);
 
 //Witherspoon Hall
+let witherspoonTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const witherspoon = L.polygon([
    [35.31103462367928, -80.73324007212359],
    [35.31080029549852, -80.73325407979254],
@@ -1232,9 +1671,18 @@ const witherspoon = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+witherspoon.bindPopup(witherspoonTmp);
 
 //Wallis Hall
+let wallisTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const wallis = L.polygon([
    [35.31110021664566, -80.73371163106256],
    [35.310830665354246, -80.73379895744455],
@@ -1248,9 +1696,18 @@ const wallis = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+wallis.bindPopup(wallisTmp);
 
 //Lynch Hall
+let lynchTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const lynch = L.polygon([
    [35.31076587414013, -80.73432540074259],
    [35.310069845374166, -80.73431467190707],
@@ -1263,9 +1720,18 @@ const lynch = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+lynch.bindPopup(lynchTmp);
 
 //Belk Hall
+let belkHallTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const belkHall = L.polygon([
    [35.31078652817023, -80.73558268620388],
    [35.31019720245745, -80.73570338561261],
@@ -1279,9 +1745,18 @@ const belkHall = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+belkHall.bindPopup(belkHallTmp);
 
 //Miltimore Hall
+let miltimoreTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const miltimore = L.polygon([
    [35.3116587247041, -80.73562189788551],
    [35.31098918132086, -80.73557580264216],
@@ -1295,9 +1770,18 @@ const miltimore = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+miltimore.bindPopup(miltimoreTmp);
 
 //Oak Hall
+let oakTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const oak = L.polygon([
    [35.309342171086655, -80.73236495637336],
    [35.3087352724797, -80.73236362356698],
@@ -1309,9 +1793,18 @@ const oak = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+oak.bindPopup(oakTmp);
 
 //Pine Hall
+let pineTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const pine = L.polygon([
    [35.30935413499191, -80.73179184962794],
    [35.30944315926096, -80.73101804163376],
@@ -1323,9 +1816,18 @@ const pine = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+pine.bindPopup(pineTmp);
 
 //Elm Hall
+let elmTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const elm = L.polygon([
    [35.308734184843686, -80.73179451524071],
    [35.30864096151553, -80.73100328946593],
@@ -1337,9 +1839,18 @@ const elm = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+elm.bindPopup(elmTmp);
 
 //Maple Hall
+let mapleTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const maple = L.polygon([
    [35.30905134249567, -80.73167781536577],
    [35.3090152271774, -80.7316751331569],
@@ -1353,9 +1864,18 @@ const maple = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+maple.bindPopup(mapleTmp);
 
 //Irwin Belk Track
+let irwinBelkTrackTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const irwinBelkTrack = L.polygon([
    [35.306354344312936, -80.73715589876169],
    [35.3045950511209, -80.73715589876169],
@@ -1367,9 +1887,18 @@ const irwinBelkTrack = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+irwinBelkTrack.bindPopup(irwinBelkTrack);
 
 //Halton Wagner Tennis Complex
+let haltonWagnerCompTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const haltonWagnerComp = L.polygon([
    [35.30694172002362, -80.73660199202175],
    [35.307754262403236, -80.73660841579779],
@@ -1381,9 +1910,18 @@ const haltonWagnerComp = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+haltonWagnerComp.bindPopup(haltonWagnerCompTmp);
 
-//Halton Wagner Tennis Complex
+//Hayes Baseball
+let hayesBaseballStadiumTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const hayesBaseballStadium = L.polygon([
    [35.30883476675297, -80.73989160657631],
    [35.30751798233495, -80.73982323380382],
@@ -1395,9 +1933,18 @@ const hayesBaseballStadium = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+hayesBaseballStadium.bindPopup(hayesBaseballStadiumTmp);
 
 //Jerry Richardson Stadium
+let jerryRichardsonStadiumTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const jerryRichardsonStadium = L.polygon([
    [35.31076967797246, -80.74121184288802],
    [35.31018566118199, -80.74146384249482],
@@ -1413,9 +1960,18 @@ const jerryRichardsonStadium = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+jerryRichardsonStadium.bindPopup(jerryRichardsonStadium);
 
 //EPIC Building
+let epicTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const epic = L.polygon([
    [35.30953213313934, -80.74188417113388],
    [35.308952496759844, -80.74096254208516],
@@ -1427,9 +1983,18 @@ const epic = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+epic.bindPopup(epicTmp);
 
 //Duke Centennial Hall Building
+let dukeCentHallTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const dukeCentHall = L.polygon([
    [35.311875921875306, -80.74173824671725],
    [35.3114337640111, -80.74122862247675],
@@ -1441,9 +2006,18 @@ const dukeCentHall = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+dukeCentHall.bindPopup(dukeCentHallTmp);
 
 //Motorsports Research
+let motoResearchTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const motoResearch = L.polygon([
    [35.31264282278439, -80.7406668422693],
    [35.31233731340297, -80.74020995085694],
@@ -1455,9 +2029,18 @@ const motoResearch = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+motoResearch.bindPopup(motoResearchTmp);
 
 //Bioinformatics 
+let bioinformaticsTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const bioinformatics = L.polygon([
    [35.31223386479665, -80.74200965400199],
    [35.31257530448414, -80.74246294732532],
@@ -1469,9 +2052,18 @@ const bioinformatics = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+bioinformatics.bindPopup(bioinformaticsTmp);
 
 //Portal
+let portalTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const portal = L.polygon([
    [35.31156691791831, -80.74334948797191],
    [35.31195393847439, -80.74294326234896],
@@ -1483,9 +2075,18 @@ const portal = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+portal.bindPopup(portalTmp);
 
 //Grigg
+let griggTmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const grigg = L.polygon([
    [35.31101454694506, -80.74268355822412],
    [35.310665398128755, -80.74203874962862],
@@ -1497,3 +2098,4 @@ const grigg = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
+grigg.bindPopup(griggTmp);
