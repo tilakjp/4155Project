@@ -1439,7 +1439,7 @@ text-align: center;
     background-color: gold;
     
   }
-  .collapsible1:before, .collapsible1:visited,.collapsible1:after{
+  .collapsible1:before, .collapsible1:visited,.collapsible1:after, .collapsible1:not(:focus){
     background-color: gold;
 
   }
@@ -1465,7 +1465,7 @@ text-align: center;
     font-size: 25px;
   }
   
-  .active, .collapsible2:hover, .collapsible2:focus {
+  .active, .collapsible2:hover, .collapsible2:focus, .collapsible2:not(:focus) {
     background-color: green;
     
   }
@@ -1494,7 +1494,7 @@ text-align: center;
     font-size: 25px;
   }
   
-  .active, .collapsible3:hover, .collapsible3:focus {
+  .active, .collapsible3:hover, .collapsible3:focus, .collapsible3:not(:focus) {
     background-color: silver;
     
   }
