@@ -403,7 +403,15 @@ criDeck.bindPopup(criDeckTmp);
 //BUILDINGS OUTLINE
 
 // Student Union
+let studentUniontmp = `
 
+<h2> Student Union </h2>
+<h3> Nearby Routes: </h3>
+<h4> Silver </h4>
+<h4> Green </h4>
+<h4> Gold </h4>
+
+`
 const studentUnion = L.polygon([
    [35.308226, -80.733409],
    [35.308473, -80.733095],
@@ -417,7 +425,8 @@ const studentUnion = L.polygon([
    fillColor: 'green',
    fillOpacity: 0.2,
 
-}).addTo(map)  
+}).addTo(map)
+studentUnion.bindPopup(studentUniontmp);
 
 //Cato College of Education
 
