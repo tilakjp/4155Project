@@ -148,7 +148,7 @@ let alumniWEastTmp = `
 
 `
 const alumniWEast = L.marker([35.302522, -80.737626]).addTo(map);
-alumniWEast.bindPopup('<h3>Alumni Way East</h3>');
+alumniWEast.bindPopup(alumniWEastTmp);
 
 //Alumni Way West marker
 let alumniWWestTmp = `
@@ -273,7 +273,7 @@ studentHealthN.bindPopup(studentHealthNTmp);
 // Martin Hall marker
 let martinHallTmp = `
 
-<h3>Hunt Hall</h3>
+<h3>Martin Hall</h3>
 <h4> Silver </h4>
 
 `
@@ -313,7 +313,7 @@ eastDeckTwo.bindPopup(eastDeckTwoTmp);
 // Athletics Complex West marker
 let athleticsCompWTmp = `
 
-<h3>Hunt Hall</h3>
+<h3>Athletics Complex West</h3>
 <h4> Gold </h4>
 
 `
@@ -436,11 +436,16 @@ studentUnion.bindPopup(studentUniontmp);
 // College of Education
 let collegeEduTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> College of Education </h2>
+<h3> Address: </h3>
+<h4> 8838 CRAVER RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Union West </b></h4>
+<h6> Silver </h6>
+<h6> Gold </h6>
+<h4><b> Union East </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
 
 `
 const collegeEdu = L.polygon([
@@ -463,11 +468,16 @@ collegeEdu.bindPopup(collegeEduTmp);
 //College of Health and Human Sciences
 let collegeHealthTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> College of Health and Human Services </h2>
+<h3> Address: </h3>
+<h4> 8838 CRAVER RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Union West </b></h4>
+<h6> Silver </h6>
+<h6> Gold </h6>
+<h4><b> Union East </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
 
 `
 const collegeHealth = L.polygon([
@@ -492,11 +502,16 @@ collegeHealth.bindPopup(collegeHealthTmp);
 //Burson
 let bursonTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Burson </h2>
+<h3> Address: </h3>
+<h4> 9006 CRAVER RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Union West </b></h4>
+<h6> Silver </h6>
+<h6> Gold </h6>
+<h4><b> Union East </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
 
 `
 const Burson = L.polygon([
@@ -518,11 +533,16 @@ Burson.bindPopup(bursonTmp);
 //Cameron
 let CameronTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Cameron </h2>
+<h3> Address: </h3>
+<h4> 9010 CRAVER RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Auxiliary Services </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
+<h4><b> Science Building </b></h4>
+<h6> Gold </h6>
+<h6> Silver </h6>
 
 `
 const Cameron = L.polygon([
@@ -542,12 +562,16 @@ Cameron.bindPopup(CameronTmp);
 // Auxiliary Building
 let AuxiliaryTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
-
+<h2> Auxiliary Services Building </h2>
+<h3> Address: </h3>
+<h4> 9016 CRAVER RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Auxiliary Services </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
+<h4><b> Science Building </b></h4>
+<h6> Gold </h6>
+<h6> Silver </h6>
 `
 const Auxiliary = L.polygon([
    [35.30791379661371, -80.73063616731012],
@@ -570,11 +594,17 @@ Auxiliary.bindPopup(AuxiliaryTmp);
 // McEniry Building
 let mcEniryTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> McEniry </h2>
+<h3> Address: </h3>
+<h4> 9215 MARY ALEXANDER RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Fretwell North </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
+<h6> Gold </h6>
+<h4><b> Fretwell South </b></h4>
+<h6> Gold </h6>
+<h6> Green </h6>
 
 `
 const mcEniry = L.polygon([
@@ -605,11 +635,17 @@ mcEniry.bindPopup(mcEniryTmp);
 // McMillan Greenhouse
 let mcMillanTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> McEniry </h2>
+<h3> Address: </h3>
+<h4> 9026 CRAVER RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h3> Nearby Stops: </h3>
+<h4><b> Auxiliary Services </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
+<h4><b> Science Building </b></h4>
+<h6> Gold </h6>
+<h6> Silver </h6>
 
 `
 const mcMillan = L.polygon([
@@ -632,11 +668,16 @@ mcMillan.bindPopup(mcMillanTmp);
 // UREC
 let URECTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> UREC </h2>
+<h3> Address: </h3>
+<h4> 8827 CRAVER RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Union West </b></h4>
+<h6> Silver </h6>
+<h6> Gold </h6>
+<h4><b> Union East </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
 
 `
 const urec = L.polygon([
@@ -657,11 +698,16 @@ urec.bindPopup(URECTmp);
 // Woodward
 let woodwardTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Woodward </h2>
+<h3> Address: </h3>
+<h4> 8812 CRAVER RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Union West </b></h4>
+<h6> Silver </h6>
+<h6> Gold </h6>
+<h4><b> Union East </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
 
 `
 const woodward = L.polygon([
@@ -682,11 +728,17 @@ woodward.bindPopup(woodwardTmp);
 // Smith
 let smithTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Smith </h2>
+<h3> Address: </h3>
+<h4> 319 LIBRARY LN, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Fretwell North </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
+<h6> Gold </h6>
+<h4><b> Fretwell South </b></h4>
+<h6> Gold </h6>
+<h6> Green </h6>
 
 `
 const smith = L.polygon([
@@ -707,11 +759,17 @@ smith.bindPopup(smithTmp);
 //Prospector
 let prospectorTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Prosector </h2>
+<h3> Address: </h3>
+<h4> 9112 NORTH LIBRARY LN, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Fretwell North </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
+<h6> Gold </h6>
+<h4><b> Fretwell South </b></h4>
+<h6> Gold </h6>
+<h6> Green </h6>
 
 `
 const prospector = L.polygon([
@@ -733,11 +791,12 @@ prospector.bindPopup(prospectorTmp);
 //Halton Arena
 let haltonTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Halton Arena </h2>
+<h3> Address: </h3>
+<h4> 9290 BARNHARDT LN, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Cone Deck </b></h4>
+<h6> Green </h6>
 
 `
 const halton = L.polygon([
@@ -763,11 +822,14 @@ halton.bindPopup(haltonTmp);
 //Atkins
 let atkinsTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Atkins Library </h2>
+<h3> Address: </h3>
+<h4> 410 LIBRARY LN, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Reese West </b></h4>
+<h6> Green </h6>
+<h4><b> Reese East </b></h4>
+<h6> Gold </h6>
 
 `
 const atkins = L.polygon([
@@ -790,11 +852,14 @@ atkins.bindPopup(atkinsTmp);
 //Kennedy
 let kennedyTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Kennedy </h2>
+<h3> Address: </h3>
+<h4> 9214 SOUTH LIBRARY LN, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Reese West </b></h4>
+<h6> Green </h6>
+<h4><b> Reese East </b></h4>
+<h6> Gold </h6>
 
 `
 const kennedy = L.polygon([
@@ -810,17 +875,23 @@ const kennedy = L.polygon([
 }).addTo(map)
 kennedy.bindPopup(kennedyTmp);
 
-//Belk Hall
-let belkTmp = `
+//Friday
+let fridayTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Friday </h2>
+<h3> Address: </h3>
+<h4> 9209 MARY ALEXANDER RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Fretwell North </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
+<h6> Gold </h6>
+<h4><b> Fretwell South </b></h4>
+<h6> Gold </h6>
+<h6> Green </h6>
 
 `
-const belk = L.polygon([
+const friday = L.polygon([
    [35.306627, -80.730288],
    [35.305999, -80.730268],
    [35.305992, -80.729659],
@@ -831,16 +902,22 @@ const belk = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
-belk.bindPopup(belkTmp);
+friday.bindPopup(fridayTmp);
 
 //Fretwell
 let fretwellTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Fretwell </h2>
+<h3> Address: </h3>
+<h4> 9203 MARY ALEXANDER RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Fretwell North </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
+<h6> Gold </h6>
+<h4><b> Fretwell South </b></h4>
+<h6> Gold </h6>
+<h6> Green </h6>
 
 `
 const fretwell = L.polygon([
@@ -859,11 +936,16 @@ fretwell.bindPopup(fretwellTmp);
 //Cato
 let catoTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Cato Hall </h2>
+<h3> Address: </h3>
+<h4> 9135 MARY ALEXANDER RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Cato Hall North </b></h4>
+<h6> Green </h6>
+<h6> Gold </h6>
+<h4><b> Cato Hall South </b></h4>
+<h6> Gold </h6>
+<h6> Green </h6>
 
 `
 const cato = L.polygon([
@@ -882,11 +964,16 @@ cato.bindPopup(catoTmp);
 //Denny
 let dennyTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Denny Hall </h2>
+<h3> Address: </h3>
+<h4> 9125 MARY ALEXANDER RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Cato Hall North </b></h4>
+<h6> Green </h6>
+<h6> Gold </h6>
+<h4><b> Cato Hall South </b></h4>
+<h6> Gold </h6>
+<h6> Green </h6>
 
 `
 const denny = L.polygon([
@@ -905,11 +992,16 @@ denny.bindPopup(dennyTmp);
 //Barnard
 let barnardTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Barnard Hall </h2>
+<h3> Address: </h3>
+<h4> 9129 MARY ALEXANDER RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Cato Hall North </b></h4>
+<h6> Green </h6>
+<h6> Gold </h6>
+<h4><b> Cato Hall South </b></h4>
+<h6> Gold </h6>
+<h6> Green </h6>
 
 `
 const barnard = L.polygon([
@@ -928,11 +1020,16 @@ barnard.bindPopup(barnardTmp);
 //Garinger
 let garingerTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Garinger Hall </h2>
+<h3> Address: </h3>
+<h4> 9121 MARY ALEXANDER RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Cato Hall North </b></h4>
+<h6> Green </h6>
+<h6> Gold </h6>
+<h4><b> Cato Hall South </b></h4>
+<h6> Gold </h6>
+<h6> Green </h6>
 
 `
 const garinger = L.polygon([
@@ -951,11 +1048,16 @@ garinger.bindPopup(garingerTmp);
 //Macy
 let macyTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Garinger Hall </h2>
+<h3> Address: </h3>
+<h4> 9224 SOUTH LIBRARY LN, Charlotte NC 28223</h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Cato Hall North </b></h4>
+<h6> Green </h6>
+<h6> Gold </h6>
+<h4><b> Cato Hall South </b></h4>
+<h6> Gold </h6>
+<h6> Green </h6>
 
 `
 const macy = L.polygon([
@@ -974,11 +1076,16 @@ macy.bindPopup(macyTmp);
 //Winningham
 let winninghamTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Winningham Hall </h2>
+<h3> Address: </h3>
+<h4> 9236 SOUTH LIBRARY LN, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Cato Hall North </b></h4>
+<h6> Green </h6>
+<h6> Gold </h6>
+<h4><b> Cato Hall South </b></h4>
+<h6> Gold </h6>
+<h6> Green </h6>
 
 `
 const winningham = L.polygon([
@@ -997,11 +1104,14 @@ winningham.bindPopup(winninghamTmp);
 //King
 let kingTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> King </h2>
+<h3> Address: </h3>
+<h4> 9037 UNIVERSITY RD, Charlotte NC 28223</h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Reese West </b></h4>
+<h6> Green </h6>
+<h4><b> Reese East </b></h4>
+<h6> Gold </h6>
 
 `
 const king = L.polygon([
@@ -1020,11 +1130,14 @@ king.bindPopup(kingTmp);
 //Reese
 let reeseTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Reese </h2>
+<h3> Address: </h3>
+<h4> 9035 UNIVERSITY RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Reese West </b></h4>
+<h6> Green </h6>
+<h4><b> Reese East </b></h4>
+<h6> Gold </h6>
 
 `
 const reese = L.polygon([
@@ -1043,11 +1156,14 @@ reese.bindPopup(reeseTmp);
 //Colvard
 let colvardTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Colvard </h2>
+<h3> Address: </h3>
+<h4> 9105 UNIVERSITY RD, Charlotte NC 28223</h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Reese West </b></h4>
+<h6> Green </h6>
+<h4><b> Reese East </b></h4>
+<h6> Gold </h6>
 
 `
 const colvard = L.polygon([
@@ -1067,11 +1183,14 @@ colvard.bindPopup(colvardTmp);
 //Rowe
 let roweTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Rowe </h2>
+<h3> Address: </h3>
+<h4> 9119 UNIVERSITY RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Reese West </b></h4>
+<h6> Green </h6>
+<h4><b> Reese East </b></h4>
+<h6> Gold </h6>
 
 `
 const rowe = L.polygon([
@@ -1091,11 +1210,16 @@ rowe.bindPopup(roweTmp);
 //Storrs
 let storrsTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Storrs Building </h2>
+<h3> Address: </h3>
+<h4> 9236 SOUTH LIBRARY LN, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Cato Hall North </b></h4>
+<h6> Green </h6>
+<h6> Gold </h6>
+<h4><b> Cato Hall South </b></h4>
+<h6> Gold </h6>
+<h6> Green </h6>
 
 `
 const storrs = L.polygon([
@@ -1118,11 +1242,16 @@ storrs.bindPopup(storrsTmp);
 //Robinson
 let robinsonTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Robinson </h2>
+<h3> Address: </h3>
+<h4> 9027 MARY ALEXANDER RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Robinson Hall North </b></h4>
+<h6> Green </h6>
+<h6> Gold </h6>
+<h4><b> Robinson Hall South </b></h4>
+<h6> Gold </h6>
+<h6> Green </h6>
 
 `
 const robinson = L.polygon([
@@ -1141,11 +1270,12 @@ robinson.bindPopup(robinsonTmp);
 //Belk Gym
 let belkGymTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Belk Gym </h2>
+<h3> Address: </h3>
+<h4> 8911 UNIVERSITY RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Cone Deck </b></h4>
+<h6> Green </h6>
 
 `
 const belkGym = L.polygon([
@@ -1170,11 +1300,14 @@ belkGym.bindPopup(belkGymTmp);
 //Cone centre
 let coneTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Cone </h2>
+<h3> Address: </h3>
+<h4> 9025 UNIVERSITY RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Reese West </b></h4>
+<h6> Green </h6>
+<h4><b> Reese East </b></h4>
+<h6> Gold </h6>
 
 `
 const cone = L.polygon([
@@ -1198,11 +1331,12 @@ cone.bindPopup(coneTmp);
 //Memorial Hall
 let memorialTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Memorial Hall </h2>
+<h3> Address: </h3>
+<h4> 8904 UNIVERSITY RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Cone Deck </b></h4>
+<h6> Green </h6>
 
 `
 const memorial = L.polygon([
@@ -1227,11 +1361,12 @@ memorial.bindPopup(memorialTmp);
 //SoVi Crossing
 let soviCrossingTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> SoVi Crossing </h2>
+<h3> Address: </h3>
+<h4> 8917 JOHNSON ALUMNI WAY, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Cone Deck </b></h4>
+<h6> Green </h6>
 
 `
 const soviCrossing = L.polygon([
@@ -1258,11 +1393,12 @@ soviCrossing.bindPopup(soviCrossingTmp);
 //Sanford
 let sanfordTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Sanford </h2>
+<h3> Address: </h3>
+<h4> 9029 JOHNSON ALUMNI WAY, Charlotte NC 28223</h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Levine Hall West </b></h4>
+<h6> Gold </h6>
 
 `
 const sanford = L.polygon([
@@ -1277,14 +1413,16 @@ const sanford = L.polygon([
 
 }).addTo(map)
 sanford.bindPopup(sanfordTmp)
+
 //Levine Hall
 let levineTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Levine Hall </h2>
+<h3> Address: </h3>
+<h4> 9057 JOHNSON ALUMNI WAY, Charlotte NC 28233 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Levine Hall West </b></h4>
+<h6> Gold </h6>
 
 `
 const levine = L.polygon([
@@ -1309,11 +1447,12 @@ levine.bindPopup(levineTmp);
 //Housing and residence 
 let housingResidenceTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Housing & Residence Life </h2>
+<h3> Address: </h3>
+<h4> 8925 JOHNSON ALUMNI WAY, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Levine Hall West </b></h4>
+<h6> Gold </h6>
 
 `
 const housingResidence = L.polygon([
@@ -1335,11 +1474,14 @@ housingResidence.bindPopup(housingResidenceTmp);
 //Scott Hall 
 let scottTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Scott Hall </h2>
+<h3> Address: </h3>
+<h4> 8885 JOHNSON ALUMNI WAY, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Hunt Hall </b></h4>
+<h6> Gold </h6>
+<h4><b> South Village Deck </b></h4>
+<h6> Green </h6>
 
 `
 const scott = L.polygon([
@@ -1359,11 +1501,14 @@ scott.bindPopup(scottTmp);
 //Laurel Hall
 let laurelTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Laurel Hall </h2>
+<h3> Address: </h3>
+<h4> 8731 Hunt Hall Lane, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Alumni Way West </b></h4>
+<h6> Gold </h6>
+<h4><b> Alumni Way East </b></h4>
+<h6> Green </h6>
 
 `
 const laurel = L.polygon([
@@ -1386,11 +1531,14 @@ laurel.bindPopup(laurelTmp);
 //Holshouser Hall
 let holshouserTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Holshouser Hall </h2>
+<h3> Address: </h3>
+<h4> 8881 JOHNSON ALUMNI WAY, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Alumni Way West </b></h4>
+<h6> Gold </h6>
+<h4><b> Alumni Way East </b></h4>
+<h6> Green </h6>
 
 `
 const holshouser = L.polygon([
@@ -1409,11 +1557,14 @@ holshouser.bindPopup(holshouserTmp);
 //Hunt Hall
 let huntTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Hunt Hall </h2>
+<h3> Address: </h3>
+<h4> 8877 JOHNSON ALUMNI WAY, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Alumni Way West </b></h4>
+<h6> Gold </h6>
+<h4><b> Alumni Way East </b></h4>
+<h6> Green </h6>
 
 `
 const hunt = L.polygon([
@@ -1434,11 +1585,16 @@ hunt.bindPopup(huntTmp);
 //Facilities Operations and Science
 let scienceTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Facilities Operations and Science </h2>
+<h3> Address: </h3>
+<h4> 9029 CRAVER RD, Charlotte NC 28223</h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Auxiliary Services </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
+<h4><b> Science Building </b></h4>
+<h6> Gold </h6>
+<h6> Silver </h6>
 
 `
 const science = L.polygon([
@@ -1457,11 +1613,16 @@ science.bindPopup(scienceTmp);
 //Sycamore
 let sycamoreTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Sycamore </h2>
+<h3> Address: </h3>
+<h4> 9310 MARY ALEXANDER RD, Charlotte NC 28223</h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Auxiliary Services </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
+<h4><b> Science Building </b></h4>
+<h6> Gold </h6>
+<h6> Silver </h6>
 
 `
 const sycamore = L.polygon([
@@ -1480,11 +1641,16 @@ sycamore.bindPopup(sycamoreTmp);
 //Hickory 
 let hickoryTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Hickory </h2>
+<h3> Address: </h3>
+<h4> 9316 MARY ALEXANDER RD, Charlotte NC 28223</h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Auxiliary Services </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
+<h4><b> Science Building </b></h4>
+<h6> Gold </h6>
+<h6> Silver </h6>
 
 `
 const hickory = L.polygon([
@@ -1503,11 +1669,16 @@ hickory.bindPopup(hickoryTmp);
 //Cedar 
 let cedarTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Cedar </h2>
+<h3> Address: </h3>
+<h4> 9322 MARY ALEXANDER RD, Charlotte NC 28223</h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Auxiliary Services </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
+<h4><b> Science Building </b></h4>
+<h6> Gold </h6>
+<h6> Silver </h6>
 
 `
 const cedar = L.polygon([
@@ -1526,11 +1697,16 @@ cedar.bindPopup(cedarTmp);
 //Cafe Activities Building
 let cabTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Cafe Activities Building </h2>
+<h3> Address: </h3>
+<h4> 220 CAB LN, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Auxiliary Services </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
+<h4><b> Science Building </b></h4>
+<h6> Gold </h6>
+<h6> Silver </h6>
 
 `
 const cab = L.polygon([
@@ -1556,11 +1732,12 @@ cab.bindPopup(cabTmp);
 //Martin Hall
 let martinTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Martin Hall </h2>
+<h3> Address: </h3>
+<h4> 9240 CAMERON BLVD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Martin Hall </b></h4>
+<h6> Silver </h6>
 
 `
 const martin = L.polygon([
@@ -1579,11 +1756,12 @@ martin.bindPopup(martinTmp);
 //Hawthorn Hall
 let hawthornTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Hawthorn Hall </h2>
+<h3> Address: </h3>
+<h4> 9213 CAMERON BV, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Martin Hall </b></h4>
+<h6> Silver </h6>
 
 `
 const hawthorn = L.polygon([
@@ -1606,11 +1784,13 @@ hawthorn.bindPopup(hawthornTmp);
 //Price 
 let priceTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Price Counseling </h2>
+<h3> Address: </h3>
+<h4> 9526 POPLAR TERRACE DR, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Student Health North </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
 
 `
 const price = L.polygon([
@@ -1629,11 +1809,13 @@ price.bindPopup(priceTmp);
 //SHC
 let shcTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Student Health Center </h2>
+<h3> Address: </h3>
+<h4> 9530 POPLAR TERRACE DR, Charlotte NC 28223</h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Student Health North </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
 
 `
 const shc = L.polygon([
@@ -1656,11 +1838,14 @@ shc.bindPopup(shcTmp);
 //Witherspoon Hall
 let witherspoonTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Witherspoon </h2>
+<h3> Address: </h3>
+<h4> 9515 POPLAR TERRACE DR, Charlotte NC 28223</h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Light Rail West </b></h4>
+<h6> Green </h6>
+<h4><b> Light Rail East </b></h4>
+<h6> Gold </h6>
 
 `
 const witherspoon = L.polygon([
@@ -1681,11 +1866,14 @@ witherspoon.bindPopup(witherspoonTmp);
 //Wallis Hall
 let wallisTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Wallis </h2>
+<h3> Address: </h3>
+<h4> 9024 CAMERON BV, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Light Rail West </b></h4>
+<h6> Green </h6>
+<h4><b> Light Rail East </b></h4>
+<h6> Gold </h6>
 
 `
 const wallis = L.polygon([
@@ -1706,11 +1894,14 @@ wallis.bindPopup(wallisTmp);
 //Lynch Hall
 let lynchTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Lynch </h2>
+<h3> Address: </h3>
+<h4> 8946 CAMERON BV, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Light Rail West </b></h4>
+<h6> Green </h6>
+<h4><b> Light Rail East </b></h4>
+<h6> Gold </h6>
 
 `
 const lynch = L.polygon([
@@ -1730,11 +1921,12 @@ lynch.bindPopup(lynchTmp);
 //Belk Hall
 let belkHallTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Belk </h2>
+<h3> Address: </h3>
+<h4> 8938 CAMERON BV, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Belk Hall South </b></h4>
+<h6> Green </h6>
 
 `
 const belkHall = L.polygon([
@@ -1755,11 +1947,12 @@ belkHall.bindPopup(belkHallTmp);
 //Miltimore Hall
 let miltimoreTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Miltimore </h2>
+<h3> Address: </h3>
+<h4> 8944 CAMERON BLVD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Belk Hall South </b></h4>
+<h6> Green </h6>
 
 `
 const miltimore = L.polygon([
@@ -1780,11 +1973,16 @@ miltimore.bindPopup(miltimoreTmp);
 //Oak Hall
 let oakTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Oak Hall </h2>
+<h3> Address: </h3>
+<h4> 9321 POPLAR TERRACE DR, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Science Building </b></h4>
+<h6> Silver </h6>
+<h6> Gold </h6>
+<h4><b> Auxiliary Services </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
 
 `
 const oak = L.polygon([
@@ -1803,11 +2001,16 @@ oak.bindPopup(oakTmp);
 //Pine Hall
 let pineTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Pine Hall </h2>
+<h3> Address: </h3>
+<h4> 9327 POPLAR TERRACE DR, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Science Building </b></h4>
+<h6> Silver </h6>
+<h6> Gold </h6>
+<h4><b> Auxiliary Services </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
 
 `
 const pine = L.polygon([
@@ -1826,11 +2029,16 @@ pine.bindPopup(pineTmp);
 //Elm Hall
 let elmTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Elm Hall </h2>
+<h3> Address: </h3>
+<h4> 9313 POPLAR TERRACE DR, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Science Building </b></h4>
+<h6> Silver </h6>
+<h6> Gold </h6>
+<h4><b> Auxiliary Services </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
 
 `
 const elm = L.polygon([
@@ -1849,11 +2057,16 @@ elm.bindPopup(elmTmp);
 //Maple Hall
 let mapleTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Maple Hall </h2>
+<h3> Address: </h3>
+<h4> 9317 POPLAR TERRACE DR, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Science Building </b></h4>
+<h6> Silver </h6>
+<h6> Gold </h6>
+<h4><b> Auxiliary Services </b></h4>
+<h6> Silver </h6>
+<h6> Green </h6>
 
 `
 const maple = L.polygon([
@@ -1874,11 +2087,14 @@ maple.bindPopup(mapleTmp);
 //Irwin Belk Track
 let irwinBelkTrackTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Irwin Belk Track </h2>
+<h3> Address: </h3>
+<h4> 8723 Cameron BV, Charlotte NC 28223</h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Alumni Way West </b></h4>
+<h6> Gold </h6>
+<h4><b> Alumni Way East </b></h4>
+<h6> Green </h6>
 
 `
 const irwinBelkTrack = L.polygon([
@@ -1897,11 +2113,14 @@ irwinBelkTrack.bindPopup(irwinBelkTrack);
 //Halton Wagner Tennis Complex
 let haltonWagnerCompTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Halton Wagner Tennis Complex </h2>
+<h3> Address: </h3>
+<h4> 8875 CHAMPIONSHIP LN, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Alumni Way West </b></h4>
+<h6> Gold </h6>
+<h4><b> Alumni Way East </b></h4>
+<h6> Green </h6>
 
 `
 const haltonWagnerComp = L.polygon([
@@ -1920,11 +2139,14 @@ haltonWagnerComp.bindPopup(haltonWagnerCompTmp);
 //Hayes Baseball
 let hayesBaseballStadiumTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Hayes Baseball Stadium </h2>
+<h3> Address: </h3>
+<h4> 8711 PHILLIPS RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Athletics Complex West </b></h4>
+<h6> Silver </h6>
+<h4><b> Athletics Complex East </b></h4>
+<h6> Silver </h6>
 
 `
 const hayesBaseballStadium = L.polygon([
@@ -1943,11 +2165,16 @@ hayesBaseballStadium.bindPopup(hayesBaseballStadiumTmp);
 //Jerry Richardson Stadium
 let jerryRichardsonStadiumTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Jerry Richardson Stadium </h2>
+<h3> Address: </h3>
+<h4> 8701 PHILLIPS RD, Charlotte NC 28223</h4>
+<h3> Nearby Stops: </h3>
+<h4><b> EPIC NORTH </b></h4>
+<h6> Silver </h6>
+<h4><b> EPIC SOUTH </b></h4>
+<h6> Silver </h6>
+<h4><b> Grigg Hall </b></h4>
+<h6> Silver </h6>
 
 `
 const jerryRichardsonStadium = L.polygon([
@@ -1965,16 +2192,19 @@ const jerryRichardsonStadium = L.polygon([
   fillOpacity: 0.2,
 
 }).addTo(map)
-jerryRichardsonStadium.bindPopup(jerryRichardsonStadium);
+jerryRichardsonStadium.bindPopup(jerryRichardsonStadiumTmp);
 
 //EPIC Building
 let epicTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> EPIC Building </h2>
+<h3> Address: </h3>
+<h4> 8700 PHILLIPS RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> EPIC NORTH </b></h4>
+<h6> Silver </h6>
+<h4><b> EPIC SOUTH </b></h4>
+<h6> Silver </h6>
 
 `
 const epic = L.polygon([
@@ -1993,11 +2223,12 @@ epic.bindPopup(epicTmp);
 //Duke Centennial Hall Building
 let dukeCentHallTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Duke Centennial Hall Building </h2>
+<h3> Address: </h3>
+<h4> 9330 ROBERT D SNYDER RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Duke Centennial </b></h4>
+<h6> Silver </h6>
 
 `
 const dukeCentHall = L.polygon([
@@ -2016,11 +2247,12 @@ dukeCentHall.bindPopup(dukeCentHallTmp);
 //Motorsports Research
 let motoResearchTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Motorsports Research </h2>
+<h3> Address: </h3>
+<h4> 8415 PHILLIPS RD, Charlotte NC 28223</h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Motorsports </b></h4>
+<h6> Silver </h6>
 
 `
 const motoResearch = L.polygon([
@@ -2039,11 +2271,12 @@ motoResearch.bindPopup(motoResearchTmp);
 //Bioinformatics 
 let bioinformaticsTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Bioinformatics Building </h2>
+<h3> Address: </h3>
+<h4> 9331 ROBERT D SNYDER RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Duke Centennial </b></h4>
+<h6> Silver </h6>
 
 `
 const bioinformatics = L.polygon([
@@ -2062,11 +2295,12 @@ bioinformatics.bindPopup(bioinformaticsTmp);
 //Portal
 let portalTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Portal </h2>
+<h3> Address: </h3>
+<h4> 9319 ROBERT D SNYDER RD, Charlotte NC 28223</h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Portal </b></h4>
+<h6> Silver </h6>
 
 `
 const portal = L.polygon([
@@ -2085,11 +2319,12 @@ portal.bindPopup(portalTmp);
 //Grigg
 let griggTmp = `
 
-<h2> Student Union </h2>
-<h3> Nearby Routes: </h3>
-<h4> Silver </h4>
-<h4> Green </h4>
-<h4> Gold </h4>
+<h2> Grigg </h2>
+<h3> Address: </h3>
+<h4> 9320 ROBERT D SNYDER RD, Charlotte NC 28223 </h4>
+<h3> Nearby Stops: </h3>
+<h4><b> Grigg </b></h4>
+<h6> Silver </h6>
 
 `
 const grigg = L.polygon([
