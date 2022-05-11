@@ -113,17 +113,16 @@ class TimeCalculator:
 
         hours = []
         times = []
-
-        if(now.hour < 20):
-            for i in range(now.hour + 1, now.hour + 6):
-                twelve_condition = "PM" if i - 12 == 0 else "AM"
-                time = f"{i - 12} PM" if i > 12 else f"{i} {twelve_condition}"
-
-                if(i == now.hour):
-                    hours.append("Now")
-                else:
-                    hours.append(time)
-                times.append(int(self.calculate_distance(filter, first_loc, second_loc, i, now.weekday(), now.month, 2, 1)))
+        for i in range(now.hour + 1, now.hour + 6):
+            twelve_condition = "PM" if i - 12 == 0 else "AM"
+            time = f"{i - 12} PM" if (i % 24) > 12 else f"{i % 24} {twelve_condition}"
+            if i % 24 == 0:
+                time = f"12 AM"
+            if(i == now.hour):
+                hours.append("Now")
+            else:
+                hours.append(time)
+            times.append(int(self.calculate_distance(filter, first_loc, second_loc, i % 24, now.weekday(), now.month, 2, 1)))
         df = pd.DataFrame({"x" : hours, "y" : times})
 
         # visualization
